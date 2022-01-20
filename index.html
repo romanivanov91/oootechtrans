@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="modalblock_bg">
     <header>
         <nav>
             <div class="containernav">
-                <div class="logo">Логотип</div>
+                <div class="logo">ООО "ТЕХТРАНС"</div>
                 <div class="menu">
                     <ul>
                         <li><a class="" href="">Главная</a></li>
@@ -20,7 +21,7 @@
                         <li><a class="" href="">Наше оборудование</a></li>
                         <li><a class="" href="">Наши заказчики</a></li>
                         <li><a class="" href="">География наших работ</a></li>
-                        <li><a class="" href="">Документы</a></li>
+                        <li><a class="" href="">Документация</a></li>
                         <li><a class="" href="">Контакты</a></li>
                     </ul>
                 </div>
@@ -28,11 +29,13 @@
         </nav>
     </header>
     <section class="main">
-        <div class="title container">
+        <div class="title_container">
             <h1>ВАС ПРИВЕТСТВУЕТ ООО "ТЕХТРАНС"</h1>
             <h2>Мы производим пусконаладочные работы на объектах энергетики по всей России</h2>
-            <input type="button" name="obo_mne" value="О нас">
-			<input type="button" name="moi_raboty" value="Наши работы">
+            <div class="mainbutton">
+                <input type="button" name="obo_mne" value="О нас">
+			    <input type="button" name="moi_raboty" value="Наши работы">
+        </div>
         </div>
     </section>
     <section class="resume">
@@ -42,28 +45,34 @@
         </div>
     </section>
     <section class="services">
-        <div class="containerservices">
         <h2>НАШИ УСЛУГИ</h2>
-            <div class="service">
-                <h3>Приемо-сдаточные испытания оборудования ПС</h3>
-                <img src="" alt="Фото услуги 1">
-                <p>Описание услуги 1</p>
+        <div class="containerservices">
+            <div class="servicerow" tabindex="1">
+                <div class="service">
+                    <h3>Приемо-сдаточные испытания оборудования ПС</h3>
+                    <img src="img/psi.jpeg" alt="Фото услуги 1">
+                    <p>Описание услуги 1</p>
+                </div>
             </div>
-            <div class="service">
-                <h3>Контрольные испытания</h3>
-                <img src="" alt="Фото услуги 2">
-                <p>Описание услуги 2</p>
+            <div class="servicerow" tabindex="1">
+                <div class="service">
+                    <h3>Контрольные испытания</h3>
+                    <img src="img/ki.jpg" alt="Фото услуги 2">
+                    <p>Описание услуги 2</p>
+                </div>
             </div>
-            <div class="service">
-                <h3>Комплексное опробование</h3>
-                <img src="" alt="Фото услуги 3">
-                <p>Описание услуги 3</p>
+            <div class="servicerow" tabindex="1">
+                <div class="service">
+                    <h3>Комплексное опробование</h3>
+                    <img src="img/ko.jpg" alt="Фото услуги 3">
+                    <p>Описание услуги 3</p>
+                </div>
             </div>
-            <div class="service">
-                <h3>Производство ТО устройств РЗА, ЩПТ</h3>
-                <img src="" alt="Фото услуги 4">
-                <p>В данную услугу входят:
-                    <ul>
+            <div class="servicerow" tabindex="1">
+                <div class="service">
+                    <h3>Производство ТО устройств РЗА, ЩПТ</h3>
+                    <img src="img/torza.jpg" alt="Фото услуги 4">
+                    <ul>В данную услугу входят:
                         <li>Проверка при новом включении, запись уставок (пуско-наладка);</li>
                         <li>Первый профилактический контроль;</li>
                         <li>Профилактический контроль;</li>
@@ -73,13 +82,14 @@
                         <li>Технический осмотр;</li>
                         <li>Проверка АВР.</li>
                     </ul>	
-                    </p>
+                        
+                </div>
             </div>
-            <div class="service">
-                <h3>Производство ТО электрооборудования ПС</h3>
-                <img src="" alt="Фото услуги 5">
-                <p>В данную услугу входят:
-                    <ul>
+            <div class="servicerow" tabindex="1">
+                <div class="service">
+                    <h3>Производство ТО электрооборудования ПС</h3>
+                    <img src="img/toelob.jpg" alt="Фото услуги 5">
+                    <ul>В данную услугу входят:
                         <li>Диагностирование электрооборудования;</li>
                         <li>Проверку функциональности и регулировку механизмов;</li>
                         <li>Очистку поверхностей от пыли, грязи и возможных подтеков масла;</li>
@@ -87,146 +97,147 @@
                         <li>Смазывание контактных и прочих трущихся деталей, и соединений;</li>
                         <li>Продувку оборудования и помещений;</li>
                         <li>Добавление при утечке трансформаторного масла и смазочных жидкостей.</li>
-                    </ul></p>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
     <section class="equipments">
         <h2>НАШЕ ОБОРУДОВАНИЕ</h2>
         <div class="containerequipments">
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/hva60.jpg" alt="Установка для проверки кабеля из сшитого полиэтилена HVA-60, напряжением 60 кВ с частотой 0,1 Hz">
                     <p>Установка для проверки кабеля из сшитого полиэтилена HVA-60, напряжением 60 кВ с частотой 0,1 Hz</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/uiv-100.jpg" alt="Установка для высоковольтных испытаний (до 110 кВ) УИВ-100">
                     <p>Установка для высоковольтных испытаний (до 110 кВ) УИВ-100</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
-                    <img src="img/aid_70m.jpg" alt="Установка для высоковольтных испытаний (до 70 кВ) АИД-70М">
+                    <img src="img/aid_70m.png" alt="Установка для высоковольтных испытаний (до 70 кВ) АИД-70М">
                     <p>Установка для высоковольтных испытаний (до 70 кВ) АИД-70М</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/retom-51.jpg" alt="РЕТОМ-51">
                     <p>Устройство для проверки сложных УРЗА – РЕТОМ-51</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/retom-61.jpg" alt="РЕТОМ-61">
                     <p>Устройство для проверки сложных УРЗА – РЕТОМ-61</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/retom-21.jpg" alt="РЕТОМ-21">
                     <p>Устройство для проверки простых УРЗА – РЕТОМ-21</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/pet-3000.jpg" alt="РЕТ-3000">
                     <p>Трансформатор нагрузочный РЕТ-3000</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/ret-vah-2000.jpg" alt="РЕТ-ВАХ-2000">
                     <p>Блок для снятия вольтамперных характеристик РЕТ-ВАХ-2000</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/retom-30ka.png" alt="РЕТОМ-30КА">
                     <p>Комплекс для прогрузки первичным током РЕТОМ-30КА</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/retom-vch64.jpg" alt="РЕТОМ-ВЧ/64">
                     <p>Комплекс для проверки ВЧ-аппаратуры и ВЧ-связи - РЕТОМ-ВЧ/64</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/pet-mom.jpg" alt="РЕТ-МОМ">
                     <p>Микроомметр и милиомметр РЕТ-МОМ</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/pet-mom.2.jpg" alt="РЕТ-МОМ.2">
                     <p>Микроомметр и милиомметр РЕТ-МОМ.2</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/pkv-m7.jpg" alt="ПКВ-М7">
                     <p>Устройство для проверки механических характеристик выключателей ПКВ-М7</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/Fluke_ti90.jpg" alt="Fluke ti95">
                     <p>Тепловизор Fluke</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/reis-205.jpg" alt="РЕЙС-205">
                     <p>Рефлектометр РЕЙС-205</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/koeffitsient.jpg" alt="Коэффициент">
                     <p>Измеритель параметров силовых трансформаторов Коэффициент</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/mpi-520.jpg" alt="MPI-520">
                     <p>Измеритель многофункциональный Sonel MPI-520</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/mic-2500.jpg" alt="MIC-2500">
                     <p>Мегомметр Sonel MIC-2500</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
-                    <img src="img/vitok.jpg" alt="Виток">
+                    <img src="img/vitok.png" alt="Виток">
                     <p>Омметр Виток</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/meteo-10.png" alt="Метео-10">
                     <p>Метеостанция Метео-10</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/Fluke 190-102-S.jpeg" alt="Fluke 190-102/S">
                     <p>Осциллограф Fluke 190-102/S</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
-                    <img src="img/multimetr.jpg" alt="Мультиметр">
+                    <img src="img/multimetr.png" alt="Мультиметр">
                     <p>Мультиметр</p>
                 </div>
             </div>
-            <div class="equipmentrow">
+            <div class="equipmentrow" tabindex="1">
                 <div class="equipment">
                     <img src="img/ciz.jpg" alt="Средства индивидуальной защиты персонала">
                     <p>Средства индивидуальной защиты персонала</p>
@@ -282,26 +293,18 @@
             </div>
         </div>
     </section>
-    <section class="advantages">
-        <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
-        <div class="containeradvantages">
-            <div class="advantages1">
-                <h3>Преимущество 1</h3>
-                <p>Описание преимущества</p>
-            </div>
-            <div class="advantages2">
-                <h3>Преимущество 2</h3>
-                <p>Описание преимущества</p>
-            </div>
-            <div class="advantages3">
-                <h3>Преимущество 3</h3>
-                <p>Описание преимущества</p>
-            </div>
-            <div class="advantages4">
-                <h3>Преимущество 4</h3>
-                <p>Описание преимущества</p>
-            </div>
-        </div>
+    <section class="documentation">
+        <h2>ДОКУМЕНТАЦИЯ</h2>
+        <h3>Свидетельство о регистрации электролабаратории</h3>
+        <img src="file/Свидетельство ЭТЛ для писем_pages-to-jpg-0001.jpg" alt="Свидетельство о регистрации электролабаратории лист 1">
+        <img src="file/Свидетельство ЭТЛ для писем_pages-to-jpg-0002.jpg" alt="Свидетельство о регистрации электролабаратории лист 2">
+        <p>Ниже представлен спиок документов которимы мы руководствуемся в своей работе:</p>
+        <ul>
+            <li><a href="file/СТО 34.01-23.1-001-2017.pdf">СТО 34.01-23.1-001-2017 Объем и нормы испытаний электрооборудования</a></li>
+            <li><a href="file/ОБЪЕМ И ПОСЛЕДОВАТЕЛЬНОСТЬ ВЫПОЛНЕНИЯ РАБОТ.pdf">Объем и последовательность выполнения работ</a></li>
+            <li><a href="file/pr555_130720me (1).pdf">Приказ Минэнерго от 13 июля 2020 г. N 555 </a></li>
+            <li>ПУЭ Глава 1.8 Нормы приемо-сдаточных испытаний</li>
+        </ul>
     </section>
     <section class="contacts">
         <h2>НАШИ КОНТАКТЫ</h2>
