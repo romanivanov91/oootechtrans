@@ -116,8 +116,10 @@ nav {
 .services {
     width:100%;
     /* background-color: beige; */
-    background: url(../img/servicesfon12.jpg) center/cover no-repeat;
+    /* background: url(../img/servicesfon12.jpg) center/cover no-repeat; */
+    background: url(../img/43540.jpg) center/cover no-repeat;
     padding-top: 50px;
+    padding-bottom: 50px;
     color: white;
 }
 .services h2 {
@@ -136,13 +138,21 @@ nav {
     margin: 15px;
     padding: 10px;
     /* background-color: white; */
-    background: url(../img/servicesfon9.jpg) center/cover no-repeat;
+    /* background: url(../img/3239613.jpg) center/cover no-repeat; */
+    background: url(../img/resumefon.jpg) center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .servicerow:hover {
     transform: scale(1.1);
+}
+/* .servicerow:focus {
+    text-align: center;
+    position: fixed;
+    top: 60px;
+    z-index: 100;
+    overflow: auto; */
 }
 .service p{
     padding: 20px;
@@ -168,13 +178,19 @@ nav {
 } */
 .equipments {
     width:100%;
-    background-color: beige;
+    /* background: url(../img/servicesfon4.jpg) center/cover no-repeat; */
+    /* background: 
+    radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%); */
+    /* background: url(../img/gr153_2000_2000.png) center/cover no-repeat; */
+    background: url(../img/zelbluefon3.jpg) center/cover no-repeat;
     padding: 50px;
 }
 .equipments h2 {
     text-align: center;
     font-size: 36px;
     padding-bottom: 50px;
+    color: white;
 }
 .containerequipments {
     display: flex;
@@ -184,7 +200,7 @@ nav {
 }
 .equipmentrow {
     width: 300px;
-    height: 300px;
+    /* height: 300px; */
     margin: 10px;
     padding: 10px;
     background-color: white;
@@ -195,12 +211,12 @@ nav {
 .equipmentrow:hover {
     transform: scale(1.1);
 }
-/* .equipmentrow:focus {
+.equipmentrow:focus {
     transform: scale(2);
     text-align: center;
     position: fixed;
-    top: 100px;
-} */
+    top: 150px;
+}
 .equipment, .service {
     text-align: center;
 }
@@ -220,9 +236,330 @@ nav {
 }
 
 /* .active {
-    position: fixed;
+    position: relative;
     height: 100%;
     width: 100%;
     z-index: 100;
     top: 60px;
 } */
+
+/* .popup {
+	position: absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+	text-align:center;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.4);
+	position:absolute;
+	z-index:1;
+	height:100%;
+	width:100%;
+}
+
+
+.popup_img {
+	position: relative;
+	margin:0 auto;
+	z-index:2;
+	max-height:94%;
+	max-width:94%;
+	margin:1% 0 0 0;
+} */
+.customers {
+    width:100%;
+    background: url(../img/servicesfon9.jpg) center/cover no-repeat;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.customers h2 {
+    text-align: center;
+    font-size: 36px;
+    padding-bottom: 50px;
+    color: white;
+}
+.customersrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.customer {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.customer img {
+    width: 90%;
+    text-align: center;
+}
+.customer p {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+}
+.geographywork {
+    width:100%;
+    background: url(../img/servicesfon5.jpg) center/cover no-repeat;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.geographywork h2 {
+    text-align: center;
+    font-size: 36px;
+    padding-bottom: 50px;
+    color: white;
+}
+.map img {
+    width: 100%;
+}
+.work {
+    height: 500px;
+    background: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.work h3 {
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+}
+.imgwork {
+    height: 70%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.imgwork img {
+    height: 100%;
+    text-align: center;
+    display: inline;
+}
+.imgwork img:hover {
+    transform: scale(1.5);
+}
+.work p {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+}
+.documentation {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* background: linear-gradient(90deg, #000000,#230b10,#331016,#230b10,#000000); */
+    background: url(../img/docfon2.jpg) center/cover no-repeat;
+}
+.documentation h2 {
+    text-align: center;
+    font-size: 36px;
+    padding-bottom: 50px;
+    color: white;
+}
+.documentation h3 {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding-bottom: 25px;
+}
+.certificate {
+    width: 75%;
+    display: flex;
+    margin: 0px auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+.certificate img {
+    width: 360px;
+    display: block;
+    margin: 20px;
+    text-align: center;
+}
+.certificate img:hover {
+    transform: scale(1.5);
+}
+.documentation p {
+    color: white;
+    text-align: left;
+    width: 50%;
+    margin: 10px auto;
+    font-size: 20px;
+}
+.documentation ul {
+    width: 50%;
+    margin: 10px auto;
+}
+.documentation li {
+    list-style-type:decimal;
+    color: white;
+    margin-top: 10px;
+}
+.documentation a {
+    text-decoration: none;
+    color: white;
+}
+.contacts {
+	width: 100%;
+	background-image: url(../img/фон2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.contacts h2 {
+	margin: 0px auto 0px auto;
+	padding-top: 50px;
+	font-size: 36px;
+	color: #ffffff;
+	text-align: center;
+	padding-bottom: 32px;
+}
+.contacts p {
+	margin: 0px auto;
+	padding: 32px 25px 25px 25px;
+	text-align: center;
+	color: #ffffff;
+    font-size: 20px;
+}
+.containercontacts {
+	display: flex;
+	width: 75%;
+	margin: 0px auto;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+.containercontacts img {
+	display: block;
+	margin: 0px auto;
+}
+.address, .e-mail, .telephone {
+	width: 300px;
+	margin: 25px auto 20px auto;
+}
+.address p {
+	color: #ffffff;
+	padding: 10px;
+	font-size: 16px;
+    text-align: center;
+}
+.e-mail a {
+	color: #ffffff;
+}
+.e-mail p {
+	padding: 10px;
+	font-size: 16px;
+    text-align: center;
+}
+.telephone p {
+	padding: 10px;
+	color: #ffffff;
+	font-size: 16px;
+    text-align: center;
+}
+.mycontact h4 {
+	width: 300px;
+	margin: 0px auto;
+	padding: 40px 0px 40px 0px;
+	color: #ffffff;
+	font-size: 20px;
+}
+.contacts form {
+	width: 530px;
+	margin: 0px auto;
+    padding-bottom: 50px;
+}
+.containerflex3 {
+	display: flex;
+	margin: 0px auto;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.imia {
+	float: left;
+	width: 250px;
+	height: 35px;
+	margin: 0px 15px 15px 0px;
+}
+.pochta {
+	float: left;
+	width: 250px;
+	height: 35px;
+	margin: 0px 0px 15px 15px;
+}
+.containerflex4 {
+	display: flex;
+	margin: 0px auto;
+	flex-direction: column;
+}
+.sms {
+	float: left;
+	width: 530px;
+	height: 35px;
+	margin: 0px 0px 30px 0px;
+}
+.otpravka {
+	display: block;
+	height: 50px;
+	width: 130px;
+	text-align: center;
+	border: 2px solid #ffffff;
+	background: none;
+	border-radius: 5px;
+	color: #ffffff;
+	font-size: 13px;
+	margin: 0px auto;
+	text-align: center;
+	transition: all 0.5s;
+	transform: scale(1.0)
+}	
+.otpravka:hover {
+	background: #fff;
+	color: black;
+}
+.otpravka:active {
+	transform: scale(1.2);
+}
+.socseti {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	text-align: center;
+	margin: 0px auto;
+}
+.socseti img {
+	margin: 0px 25px 10px 25px;
+}
+.mesto {
+	width: 100%;
+	height: 450px;
+	margin: 0px;
+}
+footer {
+	width: 100%;
+	height: 90px;
+	background: #354051;
+	text-align: center
+}
+footer p {
+	color: #ffffff;
+	padding: 38px 0px 0px 0px;
+}

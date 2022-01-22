@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="modalblock_bg">
+<body class="bodyclass">
     <header>
         <nav>
             <div class="containernav">
@@ -245,85 +246,161 @@
             </div>
         </div>
     </section>
+    <section class="customers">
+        <h2>НАШИ ЗАКАЗЧИКИ</h2>
+        <div class="customersrow">
+            <div class="customer">
+                <img src="img/ess_logo.svg" alt="ООО «Электросетьстрой-11» г. Екатеринбург">
+                <p>ООО «Электросетьстрой-11» г. Екатеринбург</p>
+            </div>
+            <div class="customer">
+                <img src="img/ventprom.svg" alt="ОА «АМЗ «Вентпром» г. Артемовский">
+                <p>ОА «АМЗ «Вентпром» г. Артемовски;</p>
+            </div>
+            <div class="customer">
+                <img src="img/res.jpg" alt="ООО «Завод РЭС» г. Озерск">
+                <p>ООО «Завод РЭС» г. Озерск</p>
+            </div>
+            <div class="customer">
+                <img src="img/its.jpg" alt="ООО «ИТС» г. Москва">
+                <p>ООО «ИТС» г. Москва</p>
+            </div>
+            <div class="customer">
+                <img src="img/rusmontaj.jpg" alt="ООО «Русмонтаж» г. Чебоксары">
+                <p>ООО «Русмонтаж» г. Чебоксары</p>
+            </div>
+            <div class="customer">
+                <img src="img/bresler.jpg" alt="ООО НПП «Бреслер» г. Чебоксары">
+                <p>ООО НПП «Бреслер» г. Чебоксары</p>
+            </div>
+        </div>
+    </section>
     <section class="geographywork">
         <h2>ГЕОГРАФИЯ НАШИХ РАБОТ</h2>
         <div class="map">
-            <img src="img/rossia.png" alt="Карта нахождения объектов">
+            <img src="img/russia1.png" alt="Карта нахождения объектов">
         </div>
         <div class="containerwork">
-            <div class="work1">
-                <h3>ОБЪЕКТ 1</h3>
-                <img src="" alt="Фото объекта 1">
-                <p>Описание объекта, что делали</p>
-            </div>
-            <div class="work2">
-                <h3>ОБЪЕКТ 2</h3>
-                <img src="" alt="Фото объекта 2">
-                <p>Описание объекта, что делали</p>
-            </div>
-            <div class="work3">
-                <h3>ОБЪЕКТ 3</h3>
-                <img src="" alt="Фото объекта 3">
-                <p>Описание объекта, что делали</p>
-            </div>
-            <div class="work4">
-                <h3>ОБЪЕКТ 4</h3>
-                <img src="" alt="Фото объекта 4">
-                <p>Описание объекта, что делали</p>
-            </div>
-            <div class="work5">
-                <h3>ОБЪЕКТ 5</h3>
-                <img src="" alt="Фото объекта 5">
-                <p>Описание объекта, что делали</p>
-            </div>
-            <div class="work6">
-                <h3>ОБЪЕКТ 6</h3>
-                <img src="" alt="Фото объекта 6">
-                <p>Описание объекта, что делали</p>
-            </div>
-            <div class="work7">
-                <h3>ОБЪЕКТ 7</h3>
-                <img src="" alt="Фото объекта 7">
-                <p>Описание объекта, что делали</p>
-            </div>
-            <div class="work8">
-                <h3>ОБЪЕКТ 8</h3>
-                <img src="" alt="Фото объекта 8">
-                <p>Описание объекта, что делали</p>
-            </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="work">
+                        <h3>ПС 110 кВ Горный щит г. Екатеринбург</h3>
+                        <div class="imgwork">
+                            <img src="img/ПС 110 кВ Горный щит г. Екатеринбург/0053acea-6e52-49ec-88b0-7bb41a700107.jpg" alt="Фото объекта 1">
+                            <img src="img/ПС 110 кВ Горный щит г. Екатеринбург/1623a7ff-903e-40d8-8822-3c8ee9ee7764.jpg" alt="Фото объекта 1">
+                            <img src="img/ПС 110 кВ Горный щит г. Екатеринбург/5feb6832-9a00-432b-a466-3f4ada8cf7e4.jpg" alt="Фото объекта 1">
+                            <img src="img/ПС 110 кВ Горный щит г. Екатеринбург/6d50590a-027c-4d12-89ee-6068fa03664d.jpg" alt="Фото объекта 1">
+                        </div>
+                        <p>ПНР 4 шк. РЗА 110 кВ, 20 ячеек 10 кВ, и все необходимые испытания первичного и вторичного электрооборудования, кроме химанализа, сдача в эксплуатацию и включение ПС в работу</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="work">
+                        <h3>ПС 6 кВ Аметистовое месторождение Камчатский край</h3>
+                        <div class="imgwork">
+                            <img src="img/ПС 6 кВ Аметистовое месторождение Камчатский край/94165103-7aa9-40c0-a6f0-fbfe3ede7bc1.jpg" alt="Фото объекта 1">
+                            <img src="img/ПС 6 кВ Аметистовое месторождение Камчатский край/31aa6ed7-7a68-4fd7-9b64-8a8c4101caa1.jpg" alt="Фото объекта 1">
+                            <img src="img/ПС 6 кВ Аметистовое месторождение Камчатский край/9f516cfd-7e01-497b-8e19-c52f9aafdb36.jpg" alt="Фото объекта 1">
+                        </div>
+                        <p>ПНР 10 ячеек 6 кВ, и все необходимые испытания первичного и вторичного электрооборудования под ключ перед включением, подача напряжения.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="work">
+                        <h3>ЦИАМ им. Баранова, г. Лыткарино, Московская обл. ПС 6 кВ и ЩПТ</h3>
+                        <div class="imgwork">
+                            <img src="img/ЦИАМ им. Баранова, г. Лыткарино, Московская обл. ПС 6 кВ и ЩПТ/5f697f6f-9345-4e7e-8989-f08fd392c9cb.jpg" alt="Фото объекта 1">
+                            <img src="img/ЦИАМ им. Баранова, г. Лыткарино, Московская обл. ПС 6 кВ и ЩПТ/867efaff-ce81-4bb4-8521-39494718218d.jpg" alt="Фото объекта 1">
+                            <img src="img/ЦИАМ им. Баранова, г. Лыткарино, Московская обл. ПС 6 кВ и ЩПТ/d0e71ae0-9876-45f0-ac81-a0c701d79562.jpg" alt="Фото объекта 1">
+                            <img src="img/ЦИАМ им. Баранова, г. Лыткарино, Московская обл. ПС 6 кВ и ЩПТ/e1aa67da-47b6-4b21-8924-9f6100f41e64.jpg" alt="Фото объекта 1">
+                        </div>
+                        <p>Ретрофит 6 ячеек 6 кВ, 2 шт. РЗА АУВ, ПНР ЩПТ (НИПОМ), все необходимые испытания.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="work">
+                        <h3>ПС №15 35 кВ и ПС №16 6кВ Лебединский ГОК г. Губкинский Белгородская обл.</h3>
+                        <div class="imgwork">
+                            <img src="img/ПС №15 35 кВ и ПС №16 6кВ Лебединский ГОК г. Губкинский Белгородская обл/01e66785-b8e6-4087-a0df-4e6df6862878.jpg" alt="Фото объекта 1">
+                            <img src="img/ПС №15 35 кВ и ПС №16 6кВ Лебединский ГОК г. Губкинский Белгородская обл/6b05b19c-974e-40b6-85fc-d9d3c0020ada.jpg" alt="Фото объекта 1">
+                            <img src="img/ПС №15 35 кВ и ПС №16 6кВ Лебединский ГОК г. Губкинский Белгородская обл/8ee1203f-e61c-4a59-a19e-cad83755f5c4.jpg" alt="Фото объекта 1">
+                            <img src="img/ПС №15 35 кВ и ПС №16 6кВ Лебединский ГОК г. Губкинский Белгородская обл/04f628e7-7684-444b-b028-a7fe641b4cc3.jpg" alt="Фото объекта 1">
+                        </div>
+                        <p>Испытания первичного и вторичного электрооборудования, в том числе 2 силовых трансформатора 35/10.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="work">
+                        <h3>ПС 35 кВ ООО Хевел, г. Новочебоксарск</h3>
+                        <div class="imgwork">
+                            <img src="img/ПС 35 кВ ООО Хевел, г. Новочебоксарск/082c87a8-2034-49d2-bfc1-1bc6fa1e0d29.jpg" alt="Фото объекта 1">
+                            <img src="img/ПС 35 кВ ООО Хевел, г. Новочебоксарск/d2d3e602-732e-4015-8e4e-5fbe046e9508.jpg" alt="Фото объекта 1">
+                            <img src="img/ПС 35 кВ ООО Хевел, г. Новочебоксарск/e6562863-01d8-4361-b170-2d48342f3278.jpg" alt="Фото объекта 1">
+                        </div>
+                        <p>Испытания кабеля 35 кВ с изоляцией из сшитого полиэтилена.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="work">
+                        <h3>ПС 6/110 кВ Промплощадка Уренгойская ГРЭС, г. Новый Уренгой</h3>
+                        <img src="" alt="Фото объекта 1">
+                        <p>2 шк. ПА, СМР</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Следующий</span>
+                </button>
+              </div>
         </div>
     </section>
     <section class="documentation">
         <h2>ДОКУМЕНТАЦИЯ</h2>
         <h3>Свидетельство о регистрации электролабаратории</h3>
-        <img src="file/Свидетельство ЭТЛ для писем_pages-to-jpg-0001.jpg" alt="Свидетельство о регистрации электролабаратории лист 1">
-        <img src="file/Свидетельство ЭТЛ для писем_pages-to-jpg-0002.jpg" alt="Свидетельство о регистрации электролабаратории лист 2">
-        <p>Ниже представлен спиок документов которимы мы руководствуемся в своей работе:</p>
+        <div class="certificate">
+            <img src="file/Свидетельство ЭТЛ для писем_pages-to-jpg-0001.jpg" alt="Свидетельство о регистрации электролабаратории лист 1">
+            <img src="file/Свидетельство ЭТЛ для писем_pages-to-jpg-0002.jpg" alt="Свидетельство о регистрации электролабаратории лист 2">
+        </div>
+        <p>Ниже представлен спиcок документов, которыми мы руководствуемся в своей работе:</p>
         <ul>
-            <li><a href="file/СТО 34.01-23.1-001-2017.pdf">СТО 34.01-23.1-001-2017 Объем и нормы испытаний электрооборудования</a></li>
-            <li><a href="file/ОБЪЕМ И ПОСЛЕДОВАТЕЛЬНОСТЬ ВЫПОЛНЕНИЯ РАБОТ.pdf">Объем и последовательность выполнения работ</a></li>
-            <li><a href="file/pr555_130720me (1).pdf">Приказ Минэнерго от 13 июля 2020 г. N 555 </a></li>
-            <li>ПУЭ Глава 1.8 Нормы приемо-сдаточных испытаний</li>
+            <li><a href="file/СТО 34.01-23.1-001-2017.pdf" target="_blank">СТО 34.01-23.1-001-2017 Объем и нормы испытаний электрооборудования</a></li>
+            <li><a href="file/ОБЪЕМ И ПОСЛЕДОВАТЕЛЬНОСТЬ ВЫПОЛНЕНИЯ РАБОТ.pdf" target="_blank">Объем и последовательность выполнения работ</a></li>
+            <li><a href="file/pr555_130720me (1).pdf" target="_blank">Приказ Минэнерго от 13 июля 2020 г. N 555 </a></li>
+            <li><a href="file/ПУЭ испытания.pdf" target="_blank">ПУЭ Глава 1.8 Нормы приемо-сдаточных испытаний</a></li>
         </ul>
     </section>
     <section class="contacts">
         <h2>НАШИ КОНТАКТЫ</h2>
-        <h3>Ниже указаны контакты по которым вы можете с нами связаться</h3>
+        <p>Ниже указаны контакты по которым вы можете с нами связаться</p>
         <div class="containercontacts">
-            <div>
-                <img src="" alt="Значок адреса">
-                <p>Адрес</p>
+            <div class="address">
+                <img src="img/гео.png" alt="Значок адреса">
+                <p>428037, РФ, Чувашская Республика,<br> г. Чебоксары, Кабельный проезд,<br> дом 4. оф. №2</p>
             </div>
-            <div>
-                <img src="" alt="Значок почты">
-                <p>E-Mail</p>
+            <div class="e-mail">
+                <img src="img/конверт.png" alt="Значок почты">
+                <p><a href="malito:tehtrans21@mail.ru">tehtrans21@mail.ru</a></p>
             </div>
-            <div>
-                <img src="" alt="Значок координаты">
-                <p>Номер телефона</p>
+            <div class="telephone">
+                <img src="img/труба.png" alt="Значок координаты">
+                <p>(8352) 46-00-05, 48-77-07</p>
             </div>
         </div>
-        <h3>Оставьте ваши контакты и мы с вами свяжемся</h3>
+        <p>Оставьте ваши контакты и мы с вами свяжемся</p>
         <form action="">
             <input class="imia" type="text" name="youname1" required placeholder="Имя">
 			<input class="pochta" type="text" name="youemail" required placeholder="E-mail">
@@ -334,6 +411,8 @@
     <footer>
         <p>Copyrite©2022 Общество с ограниченной ответственностью "ТЕХТРАНС" ИНН 2130219566 КПП 213001001 ОГРН 1202100005227</p>
     </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
