@@ -4,24 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ООО "ТЕХТРАНС"</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bodyclass">
+<body>
+    
+    <script>
+        //Загрузчик страницы (показывает анимацию, пока страница загружается)
+    window.onload = function () {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 500);
+    };
+    </script>
+    
+    <div class="preloader">
+        <div class="preloader__row">
+          <div class="preloader__item"></div>
+          <div class="preloader__item"></div>
+        </div>
+      </div>
     <header>
         <nav>
-            <div class="containernav">
-                <div class="logo">ООО "ТЕХТРАНС"</div>
+            <div class="containernav1">
+                <div class="logo">ООО «Техтест»</div>
+                <!--Форма для поиска. Не стал добавлять на одностраничный сайт
+                     <div class="formsearch"> 
+                    <form id="search-highlight" action="">
+                        <input type="text" name="term" id="term" />
+                        <input type="submit" onclick="javascript: FindOnPage('text-to-find'); return false;" name="submit" id="submit" value="Найти" />
+                    </form>
+                </div> -->
+                <div class="messenger">
+                    <p>Написать нам:</p>
+                    <div class="messengericon1">
+                        <a href="viber://chat?number=79530110315" target="_blank"><img src="img/viber.svg" alt="viber"></a>
+                        <a href="whatsapp://send?phone=+79083070001" target="_blank"><img src="img/wh.svg" alt=""></a>
+                        <a href="tg://resolve?domain=romirag" target="_blank"><img src="img/telegramm.svg" alt="Telegramm"></a>
+                        <a href="https://www.instagram.com/tehtrans_21/" target="_blank"><img src="img/inst.png" alt="Instagram"></a>
+                        <a href="malito:tehtrans21@mail.ru" target="_blank"><img src="img/email.png" alt="E-mail"></a>
+                    </div>
+                </div>
+                <div class="phonenav">
+                    <div class="tel1">
+                        <p><img src="img/mobile-phone-white.png" alt="Телефон">  8 (908) 307-00-01</p>
+                    </div>
+                    <div class="tel1">  
+                        <p><img src="img/труба.png" alt="Телефон">  +7 (8352) 46-00-05</p>
+                    </div>
+                    <div class="tel1"> 
+                        <p><img src="img/труба.png" alt="Телефон">  +7 (8352) 48-77-07</p>
+                    </div>
+                </div>
+            </div>
+            <div class="containernav2">
                 <div class="menu">
                     <ul>
                         <li><a class="" href="">Главная</a></li>
-                        <li><a class="" href="">О нас</a></li>
+                        <li><a class="" href="">О компании</a></li>
                         <li><a class="" href="">Услуги</a></li>
+                        <li><a class="" href="">Наши преимущества</a></li>
                         <li><a class="" href="">Наше оборудование</a></li>
-                        <li><a class="" href="">Наши заказчики</a></li>
+                        <li><a class="" href="">Наша квалификация</a></li>
+                        <li><a class="" href="">Заказчики</a></li>
                         <li><a class="" href="">География наших работ</a></li>
                         <li><a class="" href="">Документация</a></li>
                         <li><a class="" href="">Контакты</a></li>
@@ -32,7 +84,7 @@
     </header>
     <section class="main">
         <div class="title_container">
-            <h1>ВАС ПРИВЕТСТВУЕТ ООО "ТЕХТРАНС"</h1>
+            <h1>ВАС ПРИВЕТСТВУЕТ КОМПАНИЯ<br> «ТЕХНОЛОГИИ ТЕСТИРОВАНИЯ»<br> (ООО «ТЕХТЕСТ»)</h1>
             <h2>Мы производим пусконаладочные работы на объектах энергетики по всей России</h2>
             <div class="mainbutton">
                 <input type="button" name="obo_mne" value="О нас">
@@ -42,26 +94,26 @@
     </section>
     <section class="resume">
         <div class="containerresume">
-            <h2>О НАС</h2>
-            <p>Наша компания предлагает услуги по выполнению приемо-сдаточных испытаний оборудования ПС, контрольные испытания, комплексное опробование, производство ТО устройств РЗА, ЩПТ. Подробное описание услуг смотрите в разделе "Наши услуги".</p>
+            <h2 class="resumeh2">О компании</h2>
+            <p class="resumep">Компания «Технологии Тестирования» - это комплексный подход к пуску объектов энергетики в работу, включающий в себя как испытания, так и пуско-наладку оборудования.</p>
         </div>
     </section>
     <section class="services">
-        <h2>НАШИ УСЛУГИ</h2>
+        <h2>УСЛУГИ</h2>
         <div class="servicslide">
             <div class="container">
                 <div class="sidebar">
                 <div>
+                    <h3>Cтроительно-монтажные работы <br>(монтаж вторичных цепей)</h3>
+                </div>
+                <div>
                     <h3>Приемо-сдаточные испытания оборудования ПС</h3>
-                    <p>Описание услуги 1</p>
                 </div>
                 <div>
                     <h3>Контрольные испытания</h3>
-                    <p>Описание услуги 2</p>
                 </div>
                 <div>
                     <h3>Комплексное опробование</h3>
-                    <p>Описание услуги 3</p>
                 </div>
                 <div>
                     <h3>Производство ТО устройств РЗА, ЩПТ</h3>
@@ -90,21 +142,24 @@
                 </div>
                 </div>
                 <div class="main-slide">
-                <div>
-                    <img src="img/toelob.jpg" alt="Фото услуги 4">
-                </div>
-                <div>
-                    <img src="img/torza.jpg" alt="Фото услуги 4">
-                </div>
-                <div>
-                    <img src="img/ko.jpg" alt="Фото услуги 3">
-                </div>
-                <div>
-                    <img src="img/ki.jpg" alt="Фото услуги 2">
-                </div>
-                <div>
-                    <img src="img/psi.jpeg" alt="Фото услуги 1">
-                </div>
+                    <div>
+                        <img src="img/toelob.jpg" alt="Фото услуги 4">
+                    </div>
+                    <div>
+                        <img src="img/torza.jpg" alt="Фото услуги 4">
+                    </div>
+                    <div>
+                        <img src="img/ko.jpg" alt="Фото услуги 3">
+                    </div>
+                    <div>
+                        <img src="img/ki.jpg" alt="Фото услуги 2">
+                    </div>
+                    <div>
+                        <img src="img/psi.jpeg" alt="Фото услуги 1">
+                    </div>
+                    <div>
+                        <img src="img/mr.jpg" alt="Фото услуги 1">
+                    </div>
                 </div>
                 <div class="controls">
                 <button class="down-button">
@@ -172,176 +227,214 @@
             </div>
         </div> -->
     </section>
-    <section class="equipments">
-        <h2>НАШЕ ОБОРУДОВАНИЕ</h2>
-        <div class="containerequipments">
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/hva60.jpg" alt="Установка для проверки кабеля из сшитого полиэтилена HVA-60, напряжением 60 кВ с частотой 0,1 Hz">
-                    <p>Установка для проверки кабеля из сшитого полиэтилена HVA-60, напряжением 60 кВ с частотой 0,1 Hz</p>
-                </div>
+    <section class="advantages">
+        <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
+        <div class="advantagerow">
+            <div class="advantage">
+                <img src="img/svoipark.png" alt="Оборудование">
+                <p>Собственный парк испытательного и измерительного оборудования ведущих мировых производителей.</p>
             </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/uiv-100.jpg" alt="Установка для высоковольтных испытаний (до 110 кВ) УИВ-100">
-                    <p>Установка для высоковольтных испытаний (до 110 кВ) УИВ-100</p>
-                </div>
+            <div class="advantage">
+                <img src="img/personal.png" alt="Персонал">
+                <p>Обученный, высококвалифицированный персонал.</p>
             </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/aid_70m.png" alt="Установка для высоковольтных испытаний (до 70 кВ) АИД-70М">
-                    <p>Установка для высоковольтных испытаний (до 70 кВ) АИД-70М</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/retom-51.jpg" alt="РЕТОМ-51">
-                    <p>Устройство для проверки сложных УРЗА – РЕТОМ-51</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/retom-61.jpg" alt="РЕТОМ-61">
-                    <p>Устройство для проверки сложных УРЗА – РЕТОМ-61</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/retom-21.jpg" alt="РЕТОМ-21">
-                    <p>Устройство для проверки простых УРЗА – РЕТОМ-21</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/pet-3000.jpg" alt="РЕТ-3000">
-                    <p>Трансформатор нагрузочный РЕТ-3000</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/ret-vah-2000.jpg" alt="РЕТ-ВАХ-2000">
-                    <p>Блок для снятия вольтамперных характеристик РЕТ-ВАХ-2000</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/retom-30ka.png" alt="РЕТОМ-30КА">
-                    <p>Комплекс для прогрузки первичным током РЕТОМ-30КА</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/retom-vch64.jpg" alt="РЕТОМ-ВЧ/64">
-                    <p>Комплекс для проверки ВЧ-аппаратуры и ВЧ-связи - РЕТОМ-ВЧ/64</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/pet-mom.jpg" alt="РЕТ-МОМ">
-                    <p>Микроомметр и милиомметр РЕТ-МОМ</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/pet-mom.2.jpg" alt="РЕТ-МОМ.2">
-                    <p>Микроомметр и милиомметр РЕТ-МОМ.2</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/pkv-m7.jpg" alt="ПКВ-М7">
-                    <p>Устройство для проверки механических характеристик выключателей ПКВ-М7</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/Fluke_ti90.jpg" alt="Fluke ti95">
-                    <p>Тепловизор Fluke</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/reis-205.jpg" alt="РЕЙС-205">
-                    <p>Рефлектометр РЕЙС-205</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/koeffitsient.jpg" alt="Коэффициент">
-                    <p>Измеритель параметров силовых трансформаторов Коэффициент</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/mpi-520.jpg" alt="MPI-520">
-                    <p>Измеритель многофункциональный Sonel MPI-520</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/mic-2500.jpg" alt="MIC-2500">
-                    <p>Мегомметр Sonel MIC-2500</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/vitok.png" alt="Виток">
-                    <p>Омметр Виток</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/meteo-10.png" alt="Метео-10">
-                    <p>Метеостанция Метео-10</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/Fluke 190-102-S.jpeg" alt="Fluke 190-102/S">
-                    <p>Осциллограф Fluke 190-102/S</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/multimetr.png" alt="Мультиметр">
-                    <p>Мультиметр</p>
-                </div>
-            </div>
-            <div class="equipmentrow" tabindex="1">
-                <div class="equipment">
-                    <img src="img/ciz.jpg" alt="Средства индивидуальной защиты персонала">
-                    <p>Средства индивидуальной защиты персонала</p>
-                </div>
+            <div class="advantage">
+                <img src="img/mobilnost.png" alt="Мобильность">
+                <p>Мобильность.</p>
             </div>
         </div>
     </section>
-    <section class="customers">
-        <h2>НАШИ ЗАКАЗЧИКИ</h2>
-        <div class="customersrow">
-            <div class="customer">
-                <img src="img/ess_logo.svg" alt="ООО «Электросетьстрой-11» г. Екатеринбург">
-                <p>ООО «Электросетьстрой-11» г. Екатеринбург</p>
+    <section class="equipments">
+        <h2>НАШЕ ОБОРУДОВАНИЕ</h2>
+        <div class="containerequipments">
+            <div class="multiple-items">
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/hva60.jpg" alt="Установка для проверки кабеля из сшитого полиэтилена HVA-60, напряжением 60 кВ с частотой 0,1 Hz">
+                        <p>Установка для проверки кабеля из сшитого полиэтилена HVA-60, напряжением 60 кВ с частотой 0,1 Hz</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/uiv-100.jpg" alt="Установка для высоковольтных испытаний (до 110 кВ) УИВ-100">
+                        <p>Установка для высоковольтных испытаний (до 110 кВ) УИВ-100</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/aid_70m.png" alt="Установка для высоковольтных испытаний (до 70 кВ) АИД-70М">
+                        <p>Установка для высоковольтных испытаний (до 70 кВ) АИД-70М</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/retom-51.jpg" alt="РЕТОМ-51">
+                        <p>Устройство для проверки сложных УРЗА – РЕТОМ-51</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/retom-61.jpg" alt="РЕТОМ-61">
+                        <p>Устройство для проверки сложных УРЗА – РЕТОМ-61</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/retom6000.jpg" alt="РЕТОМ-6000">
+                        <p>Устройство измерительное электрической прочности и сопротивления изоляции – РЕТОМ-6000</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/retom-21.jpg" alt="РЕТОМ-21">
+                        <p>Устройство для проверки простых УРЗА – РЕТОМ-21</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/pet-3000.jpg" alt="РЕТ-3000">
+                        <p>Трансформатор нагрузочный РЕТ-3000</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/ret-vah-2000.jpg" alt="РЕТ-ВАХ-2000">
+                        <p>Блок для снятия вольтамперных характеристик РЕТ-ВАХ-2000</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/retom-30ka.png" alt="РЕТОМ-30КА">
+                        <p>Комплекс для прогрузки первичным током РЕТОМ-30КА</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/retom-vch64.jpg" alt="РЕТОМ-ВЧ/64">
+                        <p>Комплекс для проверки ВЧ-аппаратуры и ВЧ-связи - РЕТОМ-ВЧ/64</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/pet-mom.jpg" alt="РЕТ-МОМ">
+                        <p>Микроомметр и милиомметр РЕТ-МОМ</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/pet-mom.2.jpg" alt="РЕТ-МОМ.2">
+                        <p>Микроомметр и милиомметр РЕТ-МОМ.2</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/pkv-m7.jpg" alt="ПКВ-М7">
+                        <p>Устройство для проверки механических характеристик выключателей ПКВ-М7</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/Fluke_ti90.jpg" alt="Fluke ti95">
+                        <p>Тепловизор Fluke</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/reis-205.jpg" alt="РЕЙС-205">
+                        <p>Рефлектометр РЕЙС-205</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/koeffitsient.jpg" alt="Коэффициент">
+                        <p>Измеритель параметров силовых трансформаторов Коэффициент</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/mpi-520.jpg" alt="MPI-520">
+                        <p>Измеритель многофункциональный Sonel MPI-520</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/mic-2500.jpg" alt="MIC-2500">
+                        <p>Мегомметр Sonel MIC-2500</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/vitok.png" alt="Виток">
+                        <p>Омметр Виток</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/meteo-10.png" alt="Метео-10">
+                        <p>Метеостанция Метео-10</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/Fluke 190-102-S.jpeg" alt="Fluke 190-102/S">
+                        <p>Осциллограф Fluke 190-102/S</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/CMP-400.jpg" alt="CMP-400">
+                        <p>Клещи электроизмерительные CMP-400</p>
+                    </div>
+                </div>
+                <div class="equipmentrow" tabindex="1">
+                    <div class="equipment">
+                        <img src="img/ciz.jpg" alt="Средства индивидуальной защиты персонала">
+                        <p>Средства индивидуальной защиты персонала</p>
+                    </div>
+                </div>
             </div>
-            <div class="customer">
-                <img src="img/ventprom.svg" alt="ОА «АМЗ «Вентпром» г. Артемовский">
-                <p>ОА «АМЗ «Вентпром» г. Артемовски;</p>
+        </div>
+        </section>
+        <section class="qualification">
+            <h2>НАША КВАЛИФИКАЦИЯ</h2>
+            <p>Наши сотрудники прошли обучение тамто и там то...............</p>
+            <div class="certificate">
+                <img src="" alt="Сертификат 1">
+                <img src="" alt="Сертификат 2">
+                <img src="" alt="Сертификат 3">
             </div>
-            <div class="customer">
-                <img src="img/res.jpg" alt="ООО «Завод РЭС» г. Озерск">
-                <p>ООО «Завод РЭС» г. Озерск</p>
-            </div>
-            <div class="customer">
-                <img src="img/its.jpg" alt="ООО «ИТС» г. Москва">
-                <p>ООО «ИТС» г. Москва</p>
-            </div>
-            <div class="customer">
-                <img src="img/rusmontaj.jpg" alt="ООО «Русмонтаж» г. Чебоксары">
-                <p>ООО «Русмонтаж» г. Чебоксары</p>
-            </div>
-            <div class="customer">
-                <img src="img/bresler.jpg" alt="ООО НПП «Бреслер» г. Чебоксары">
-                <p>ООО НПП «Бреслер» г. Чебоксары</p>
-            </div>
+        </section>
+        <section class="customers">
+            <h2>ЗАКАЗЧИКИ</h2>
+            <div class="customersrow">
+                <div class="customer">
+                    <img src="img/ess_logo.svg" alt="ООО «Электросетьстрой-11» г. Екатеринбург">
+                    <p>ООО «Электросетьстрой-11» <br> г. Екатеринбург</p>
+                </div>
+                <div class="customer">
+                    <img src="img/avass.jpg" alt="ООО «Электросетьстрой-11» г. Екатеринбург">
+                    <p>ООО «АВАСС» <br> г. Екатеринбург</p>
+                </div>
+                <div class="customer">
+                    <img src="img/ventprom.svg" alt="ОА «АМЗ «Вентпром» г. Артемовский">
+                    <p>ОА «АМЗ «Вентпром» г. Артемовски;</p>
+                </div>
+                <div class="customer">
+                    <img src="img/res.jpg" alt="ООО «Завод РЭС» г. Озерск">
+                    <p>ООО «Завод РЭС» г. Озерск</p>
+                </div>
+                <div class="customer">
+                    <img src="img/its.jpg" alt="ООО «ИТС» г. Москва">
+                    <p>ООО «ИТС» г. Москва</p>
+                </div>
+                <div class="customer">
+                    <img src="img/rusmontaj.jpg" alt="ООО «Русмонтаж» г. Чебоксары">
+                    <p>ООО «Русмонтаж» г. Чебоксары</p>
+                </div>
+                <div class="customer">
+                    <img src="img/bresler.jpg" alt="ООО НПП «Бреслер» г. Чебоксары">
+                    <p>ООО НПП «Бреслер» г. Чебоксары</p>
+                </div>
         </div>
     </section>
     <section class="geographywork">
@@ -350,7 +443,7 @@
             <img src="img/russia1.png" alt="Карта нахождения объектов">
         </div>
         <div class="containerwork">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            <div id="carouselExampleIndicators" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -443,21 +536,20 @@
     </section>
     <section class="documentation">
         <h2>ДОКУМЕНТАЦИЯ</h2>
-        <h3>Свидетельство о регистрации электролабаратории</h3>
+        <!-- <h3>Свидетельство о регистрации электролабаратории</h3>
         <div class="certificate">
             <img src="file/Свидетельство ЭТЛ для писем_pages-to-jpg-0001.jpg" alt="Свидетельство о регистрации электролабаратории лист 1">
             <img src="file/Свидетельство ЭТЛ для писем_pages-to-jpg-0002.jpg" alt="Свидетельство о регистрации электролабаратории лист 2">
-        </div>
+        </div> -->
         <p>Ниже представлен спиcок документов, которыми мы руководствуемся в своей работе:</p>
         <ul>
             <li><a href="file/СТО 34.01-23.1-001-2017.pdf" target="_blank">СТО 34.01-23.1-001-2017 Объем и нормы испытаний электрооборудования</a></li>
-            <li><a href="file/ОБЪЕМ И ПОСЛЕДОВАТЕЛЬНОСТЬ ВЫПОЛНЕНИЯ РАБОТ.pdf" target="_blank">Объем и последовательность выполнения работ</a></li>
             <li><a href="file/pr555_130720me (1).pdf" target="_blank">Приказ Минэнерго от 13 июля 2020 г. N 555 </a></li>
             <li><a href="file/ПУЭ испытания.pdf" target="_blank">ПУЭ Глава 1.8 Нормы приемо-сдаточных испытаний</a></li>
         </ul>
     </section>
     <section class="contacts">
-        <h2>НАШИ КОНТАКТЫ</h2>
+        <h2>КОНТАКТЫ</h2>
         <p>Ниже указаны контакты по которым вы можете с нами связаться</p>
         <div class="containercontacts">
             <div class="address">
@@ -480,12 +572,23 @@
             <textarea class="sms" name="youmessage" required placeholder="Сообщение"></textarea>
 			<input class="otpravka" type="submit" name="otpravit2" value="Отправить">
         </form>
+        <div class="messengericon2">
+            <a href="viber://chat?number=79530110315" target="_blank"><img src="img/viber.svg" alt="viber"></a>
+            <a href="whatsapp://send?phone=+79083070001" target="_blank"><img src="img/wh.svg" alt=""></a>
+            <a href="tg://resolve?domain=romirag" target="_blank"><img src="img/telegramm.svg" alt="Telegramm"></a>
+            <a href="https://www.instagram.com/tehtrans_21/" target="_blank"><img src="img/inst.png" alt="Instagram"></a>
+            <a href="malito:tehtrans21@mail.ru" target="_blank"><img src="img/email.png" alt="E-mail"></a>
+        </div>
     </section>
+    <section class="maps">
+            <iframe id="map_545262124" frameborder="0" width="100%" height="100%" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe><script type="text/javascript">(function(e,t){var r=document.getElementById(e);r.contentWindow.document.open(),r.contentWindow.document.write(atob(t)),r.contentWindow.document.close()})("map_545262124", "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUsdCl7dmFyIHI9SlNPTi5wYXJzZShlKSxuPUpTT04ucGFyc2UodCk7ZnVuY3Rpb24gYShlKXtyZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KGF0b2IoZSkuc3BsaXQoIiIpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4iJSIrKCIwMCIrZS5jaGFyQ29kZUF0KDApLnRvU3RyaW5nKDE2KSkuc2xpY2UoLTIpfSkuam9pbigiIikpfURHLnRoZW4oZnVuY3Rpb24oKXt2YXIgZT1ERy5tYXAoIm1hcCIse2NlbnRlcjpbbi5sYXQsbi5sb25dLHpvb206bi56b29tfSk7REcuZ2VvSlNPTihyLHtzdHlsZTpmdW5jdGlvbihlKXt2YXIgdCxyLG4sYSxvO3JldHVybntmaWxsQ29sb3I6bnVsbD09PSh0PWUpfHx2b2lkIDA9PT10P3ZvaWQgMDp0LnByb3BlcnRpZXMuZmlsbENvbG9yLGZpbGxPcGFjaXR5Om51bGw9PT0ocj1lKXx8dm9pZCAwPT09cj92b2lkIDA6ci5wcm9wZXJ0aWVzLmZpbGxPcGFjaXR5LGNvbG9yOm51bGw9PT0obj1lKXx8dm9pZCAwPT09bj92b2lkIDA6bi5wcm9wZXJ0aWVzLnN0cm9rZUNvbG9yLHdlaWdodDpudWxsPT09KGE9ZSl8fHZvaWQgMD09PWE/dm9pZCAwOmEucHJvcGVydGllcy5zdHJva2VXaWR0aCxvcGFjaXR5Om51bGw9PT0obz1lKXx8dm9pZCAwPT09bz92b2lkIDA6by5wcm9wZXJ0aWVzLnN0cm9rZU9wYWNpdHl9fSxwb2ludFRvTGF5ZXI6ZnVuY3Rpb24oZSx0KXtyZXR1cm4icmFkaXVzImluIGUucHJvcGVydGllcz9ERy5jaXJjbGUodCxlLnByb3BlcnRpZXMucmFkaXVzKTpERy5tYXJrZXIodCx7aWNvbjpmdW5jdGlvbihlKXtyZXR1cm4gREcuZGl2SWNvbih7aHRtbDoiPGRpdiBjbGFzcz0nYnVsbGV0LW1hcmtlcicgc3R5bGU9J2JvcmRlci1jb2xvcjogIitlKyI7Jz48L2Rpdj4iLGNsYXNzTmFtZToib3ZlcnJpZGUtZGVmYXVsdCIsaWNvblNpemU6WzIwLDIwXSxpY29uQW5jaG9yOlsxMCwxMF19KX0oZS5wcm9wZXJ0aWVzLmNvbG9yKX0pfSxvbkVhY2hGZWF0dXJlOmZ1bmN0aW9uKGUsdCl7ZS5wcm9wZXJ0aWVzLmRlc2NyaXB0aW9uJiZ0LmJpbmRQb3B1cChhKGUucHJvcGVydGllcy5kZXNjcmlwdGlvbikse2Nsb3NlQnV0dG9uOiEwLGNsb3NlT25Fc2NhcGVLZXk6ITB9KSxlLnByb3BlcnRpZXMudGl0bGUmJnQuYmluZFRvb2x0aXAoYShlLnByb3BlcnRpZXMudGl0bGUpLHtwZXJtYW5lbnQ6ITAsb3BhY2l0eToxLGNsYXNzTmFtZToicGVybWFuZW50LXRvb2x0aXAifSl9fSkuYWRkVG8oZSl9KX0pKCdbeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsiY29sb3IiOiIjZjIxMzAyIiwidGl0bGUiOiIwSjdRbnRDZUlNS3IwS0xRbGRDbDBLTFFsZENoMEtMQ3V3PT0iLCJkZXNjcmlwdGlvbiI6IlBIQSswSnJRbnRDYzBKL1FrTkNkMEpqUXJ5RENxOUNpMEpYUXBkQ2QwSjdRbTlDZTBKUFFtTkNZSU5DaTBKWFFvZENpMEpqUW9OQ2UwSkxRa05DZDBKalFyOEs3UEM5d1BnPT0iLCJ6SW5kZXgiOjEwMDAwMDAwMDB9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6WzQ3LjI5NzkyNCw1Ni4xMjE1NDJdfSwiaWQiOjQzOX1dJywneyJsYXQiOjU2LjEyMTI2Mzc2NzcwMDMwNiwibG9uIjo0Ny4yOTg3MjAxODA5ODgzMiwiem9vbSI6MTh9Jyk8L3NjcmlwdD48c2NyaXB0IGFzeW5jPSIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbS9ndGFnL2pzP2lkPVVBLTE1ODg2NjE2OC0xIj48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+KGZ1bmN0aW9uKGUpe2Z1bmN0aW9uIHQoKXtkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpfXdpbmRvdy5kYXRhTGF5ZXI9d2luZG93LmRhdGFMYXllcnx8W10sdCgianMiLG5ldyBEYXRlKSx0KCJjb25maWciLGUpLHdpbmRvdy5ndGFnPXR9KSgnVUEtMTU4ODY2MTY4LTEnKTwvc2NyaXB0PjwvYm9keT4=")</script>
+	</section>
     <footer>
         <p>Copyrite©2022 Общество с ограниченной ответственностью "ТЕХТРАНС" ИНН 2130219566 КПП 213001001 ОГРН 1202100005227</p>
     </footer>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

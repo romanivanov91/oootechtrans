@@ -1,18 +1,125 @@
+/*Загрузчик страницы (показывает анимацию, пока страница загружается)*/
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+  }
+  
+  .preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  
+  .preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #c56b04;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+  }
+  
+  .preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+  }
+  
+  @keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes preloader-bounce {
+  
+    0%,
+    100% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; /*Устанавливаем шрифт для всего документа*/
 }
+
+/* Навигация */
 nav {
 	width: 100%;
-	height: 60px;
-	background: #344051;
-	position: fixed;
-	z-index:100;
 }
-.containernav {
+/* .logo, .messenger, .phonenav {
+    width: 300px;
+} */
+.containernav1 {
     display: flex;
     justify-content: space-between;
-    margin-left: 50px;
-    margin-right: 50px;
+    align-items: center;
+    height: 120px;
+    /* background: url(../img/zelbluefon3.jpg) center/cover no-repeat; */
+    background: #283535;
+    padding: 10px 100px;
+    color:white;
+}
+.containernav1 img {
+    width: 25px;
+    height: 25px;
+}
+.messenger {
+    text-align: center;
+}
+.messenger img {
+    margin-left: 5px;
+}
+.phonenav {
+    float: right;
+}
+.tel1 {
+    font-size: 14px;
+}
+.containernav2 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    width:100%;
+    height: 60px;
+	background: #344051;
+	z-index:100;
+    overflow: hidden;
+}
+.containernav2-fixed{
+    position: fixed;
+    top: 0px;
 }
 .logo {
 	color: #fff;
@@ -22,6 +129,17 @@ nav {
 }
 .menu {
     float: left;
+    width:100%;
+}
+@keyframes topshift {
+	from {
+		opacity: 0;
+		margin-top: -80px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0px;
+	}
 }
 .menu li {
     float: left;
@@ -29,6 +147,7 @@ nav {
 	color: #fff;
 	margin-left: 20px;
 	font-size: 14px;
+    animation: topshift 1s ease forwards;
 }
 .menu li a {
 	transition: all 0.5s;
@@ -47,11 +166,22 @@ nav {
 .menu li a:active {
 	transform: scale(1.1);
 }
+/* Приветствие */
 .main {
     width: 100%;
     height: 100vh;
     float: left;
     background: url(../img/veter.jpg) center/cover no-repeat;
+}
+@keyframes titlemove {
+	from {
+		opacity: 0;
+		/* margin-left: -400px; */
+	}
+	to {
+		opacity: 1;
+		/* margin-left: 0px; */
+	}
 }
 .title_container {
     height: 100%;
@@ -59,12 +189,16 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: titlemove 1s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
 }
 .title_container h1 {
     font-size: 50px;
     font-weight: bold;
     color: white;
     margin: 20px auto;
+    text-align: center;
 }
 .title_container h2 {
     font-size: 24px;
@@ -91,10 +225,12 @@ nav {
 .title_container input:active {
 	transform: scale(1.2)
 }
+/* Раздел "О нас" */
 .resume {
     width: 100%;
     height: 100vh;
-    background: url(../img/resumefon5.jpg) center/cover no-repeat;
+    /* background: url(../img/resumefon5.jpg) center/cover no-repeat; */
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,24 +242,51 @@ nav {
     justify-content: center;
     align-items: center;
 }
-.containerresume h2 {
+@keyframes resumeh2move {
+	from {
+		opacity: 0;
+		margin-bottom: -200px;
+	}
+	to {
+		opacity: 1;
+		margin-bottom: 0px;
+	}
+}
+.resumeh2 {
     font-size: 36px;
-    color: white;
     margin-bottom: 20px;
+    opacity: 0;
 }
-.containerresume p {
+.resumeh2.animClass {
+    animation: resumeh2move 1s ease forwards;
+}
+@keyframes resumepmove {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+.resumep {
     font-size: 24px;
-    color: white;
     text-align: center;
+    opacity: 0;
 }
+.resumep.animClass {
+    animation: resumepmove 1s ease forwards;
+}
+
+/* Раздел "Услуги" */
 .services {
     width:100%;
     /* background-color: beige; */
     /* background: url(../img/servicesfon12.jpg) center/cover no-repeat; */
-    background: url(../img/43540.jpg) center/cover no-repeat;
+    /* background: url(../img/43540.jpg) center/cover no-repeat; */
+    background-color: whitesmoke;
     padding-top: 50px;
     padding-bottom: 50px;
-    color: white;
+    /* color: white; */
 }
 .services h2 {
     text-align: center;
@@ -160,7 +323,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    /* color: #fff;*/
   }
   
   /* .sidebar h1 {
@@ -210,7 +373,7 @@ nav {
     position: absolute;
     left: 50%;
     top: 50%;
-    z-index: 100;
+    z-index: 99;
   }
   
   .container .controls .down-button {
@@ -224,24 +387,20 @@ nav {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
-.servicslide ul {
-    padding: 20px;
-    text-align: left;
+.sidebar ul {
+    width: 100%;
+    padding: 10px;
     font-weight: bold;
-    margin: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
-.servicslide li {
-    list-style-type: initial;
+.sidebar li {
+  list-style-type: initial;
+  list-style-position:inside;
 }
-.servicslide h3 {
+.sidebar h3 {
     text-align: center;
     font-size: 24px;
-    margin: 10px 20px;
-}
-.servicslide p {
-    text-align: center;
-    width:100%;
-    font-size: 14px;
     margin: 10px 20px;
 }
 /* Слайдер Наши услуги - конец */
@@ -271,8 +430,9 @@ nav {
     position: fixed;
     top: 60px;
     z-index: 100;
-    overflow: auto; */
-} */
+    overflow: auto;
+}
+ */
 .service p{
     padding: 20px;
     font-size: 14px;
@@ -294,53 +454,123 @@ nav {
     position: fixed;
     top: 100px;
 } */
+
+/*Раздел наши преимущества*/
+.advantages {
+    width:100%;
+    padding: 50px;
+    background-color: #fff;
+}
+.advantages h2 {
+    text-align: center;
+    font-size: 36px;
+    padding-bottom: 50px;
+}
+.advantagerow {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.advantage {
+    width: 25vw;
+    height: 30vh;
+    text-align: center;
+}
+.advantage img {
+    height:100px;
+}
+.advantage p {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* Раздел Наша квалификация*/
+.qualification {
+    width: 100%;
+    background-color: white;
+}
+.qualification h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.qualification p {
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+/* Раздел "Наше оборудование" */
 .equipments {
     width:100%;
+    height: 100vh;
     /* background: url(../img/servicesfon4.jpg) center/cover no-repeat; */
     /* background: 
     radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #ffffff 0%, #ffffac 8%, #d1b464 25%, #5d4a1f 62.5%, #5d4a1f 100%); */
     /* background: url(../img/gr153_2000_2000.png) center/cover no-repeat; */
-    background: url(../img/volna.jpg) center/cover no-repeat;
+    /* background: url(../img/volna.jpg) center/cover no-repeat; */
+    background-color:whitesmoke;
     padding: 50px;
 }
 .equipments h2 {
     text-align: center;
     font-size: 36px;
     padding-bottom: 50px;
-    color: white;
+    /* color: white; */
 }
 .containerequipments {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+   position: relative;
 }
+.slick-slide {
+    padding: 0 10px;
+}
+  .prev,
+  .next {
+    position: absolute;
+    top: 40%;
+    height: 60px;
+    width: 60px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .next {
+    right: 0;
+  }
 .equipmentrow {
     width: 300px;
-    /* height: 300px; */
-    margin: 10px;
+    height: 400px;
+    margin: 0 0px;
     padding: 10px;
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+
 }
-.equipmentrow:hover {
-    transform: scale(1.1);
+/* .equipmentrow:hover {
+    transform: scale(1.1);`
 }
 .equipmentrow:focus {
     transform: scale(2);
     text-align: center;
     position: fixed;
     top: 150px;
+    transition: all 1s ease 0s;
+    z-index: 100;
+} */
+.equipment {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
 }
-.equipment, .service {
-    text-align: center;
-}
-.equipment img, .service img {
+.equipment img {
     width: 55%;
-    height: auto;
+    margin: auto;
 }
 .equipment h3, .service h3 {
     padding: 20px;
@@ -388,9 +618,12 @@ nav {
 	max-width:94%;
 	margin:1% 0 0 0;
 } */
+
+/*Раздел Наши заказчики*/
 .customers {
     width:100%;
-    background: url(../img/servicesfon9.jpg) center/cover no-repeat;
+    /* background: url(../img/servicesfon9.jpg) center/cover no-repeat; */
+    background-color: whitesmoke;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -398,7 +631,7 @@ nav {
     text-align: center;
     font-size: 36px;
     padding-bottom: 50px;
-    color: white;
+    /* color: white; */
 }
 .customersrow {
     display: flex;
@@ -422,13 +655,16 @@ nav {
 }
 .customer p {
     text-align: center;
-    color: white;
+    /* color: white; */
     font-size: 14px;
     padding: 10px;
 }
+
+/*Раздел география наших работ*/
 .geographywork {
     width:100%;
-    background: url(../img/servicesfon5.jpg) center/cover no-repeat;
+    /* background: url(../img/servicesfon5.jpg) center/cover no-repeat; */
+    background-color: #fff;
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -436,7 +672,7 @@ nav {
     text-align: center;
     font-size: 36px;
     padding-bottom: 50px;
-    color: white;
+    /* color: white; */
 }
 .map img {
     width: 100%;
@@ -452,7 +688,7 @@ nav {
 }
 .work h3 {
     font-size: 24px;
-    color: white;
+    /* color: white; */
     padding: 10px;
 }
 .imgwork {
@@ -472,26 +708,29 @@ nav {
 }
 .work p {
     text-align: center;
-    color: white;
+    /* color: white; */
     font-size: 14px;
     padding: 10px;
 }
+
+/*Раздел документация*/
 .documentation {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
     /* background: linear-gradient(90deg, #000000,#230b10,#331016,#230b10,#000000); */
-    background: url(../img/zelbluefon3.jpg) center/cover no-repeat;
+    /* background: url(../img/zelbluefon3.jpg) center/cover no-repeat; */
+    background-color: whitesmoke;
 }
 .documentation h2 {
     text-align: center;
     font-size: 36px;
     padding-bottom: 50px;
-    color: white;
+    /* color: white; */
 }
 .documentation h3 {
     font-size: 24px;
-    color: white;
+    /* color: white; */
     text-align: center;
     padding-bottom: 25px;
 }
@@ -515,7 +754,7 @@ nav {
     transform: scale(1.5);
 }
 .documentation p {
-    color: white;
+    /* color: white; */
     text-align: left;
     width: 50%;
     margin: 10px auto;
@@ -527,13 +766,15 @@ nav {
 }
 .documentation li {
     list-style-type:decimal;
-    color: white;
+    /* color: white; */
     margin-top: 10px;
 }
 .documentation a {
     text-decoration: none;
-    color: white;
+    /* color: white; */
 }
+
+/*Раздел контакты*/
 .contacts {
 	width: 100%;
 	background-image: url(../img/фон2.jpg);
@@ -655,22 +896,30 @@ nav {
 .otpravka:active {
 	transform: scale(1.2);
 }
-.socseti {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-direction: row;
-	text-align: center;
-	margin: 0px auto;
+.messengericon2 {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 25px;
+    margin: 0px auto;
 }
-.socseti img {
-	margin: 0px 25px 10px 25px;
+.messengericon2 img {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin: 0px 25px 25px;
 }
-.mesto {
-	width: 100%;
-	height: 450px;
-	margin: 0px;
+.maps {
+    width: 100%;
+    height: 80vh;
+    padding: 0px;
 }
+/* .mapsrow {
+    width: 100%;
+    height:100%;
+    padding: 0px;
+    margin: 0px;
+} */
 footer {
 	width: 100%;
 	height: 90px;
