@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -67,38 +69,64 @@
             <div class="containernav2">
                 <div class="menu">
                     <ul>
-                        <li><a class="" href="">Главная</a></li>
-                        <li><a class="" href="">О компании</a></li>
-                        <li><a class="" href="">Услуги</a></li>
-                        <li><a class="" href="">Наши преимущества</a></li>
-                        <li><a class="" href="">Наше оборудование</a></li>
-                        <li><a class="" href="">Наша квалификация</a></li>
-                        <li><a class="" href="">Заказчики</a></li>
-                        <li><a class="" href="">География наших работ</a></li>
-                        <li><a class="" href="">Документация</a></li>
-                        <li><a class="" href="">Контакты</a></li>
+                        <li><a class="" href="#mainid">Главная</a></li>
+                        <li><a class="" href="#resumeid">О компании</a></li>
+                        <li><a class="" href="#servicesid">Услуги</a></li>
+                        <li><a class="" href="#advantagesid">Наши преимущества</a></li>
+                        <li><a class="" href="#equipmentsid">Наше оборудование</a></li>
+                        <li><a class="" href="#qualificationid">Наша квалификация</a></li>
+                        <li><a class="" href="#customersid">Заказчики</a></li>
+                        <li><a class="" href="#geographyworkid">География наших работ</a></li>
+                        <li><a class="" href="#documentationid">Документация</a></li>
+                        <li><a class="" href="#contactsid">Контакты</a></li>
                     </ul>
+                </div>
+                <div class="navbutton">
+                    <div class="dropdown">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">Навигация</a>
+
+                      <ul class="dropdown-menu dropmenu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="" href="#mainid">Главная</a></li>
+                        <li><a class="" href="#resumeid">О компании</a></li>
+                        <li><a class="" href="#servicesid">Услуги</a></li>
+                        <li><a class="" href="#advantagesid">Наши преимущества</a></li>
+                        <li><a class="" href="#equipmentsid">Наше оборудование</a></li>
+                        <li><a class="" href="#qualificationid">Наша квалификация</a></li>
+                        <li><a class="" href="#customersid">Заказчики</a></li>
+                        <li><a class="" href="#geographyworkid">География наших работ</a></li>
+                        <li><a class="" href="#documentationid">Документация</a></li>
+                        <li><a class="" href="#contactsid">Контакты</a></li>
+                          </ul>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
-    <section class="main">
+    <div class="callback">
+            <p>Заказать обратный звонок</p>
+            <form action="">
+                <input class="name1" type="text" name="youname1" required placeholder="Имя">
+                <input class="phone1" type="text" name="youephone1" required placeholder="Номер телефона">
+                <input class="otpravka" type="submit" name="otpravit1" value="Отправить">
+            </form>
+    </div>
+    <section class="main section" id="mainid">
         <div class="title_container">
             <h1>ВАС ПРИВЕТСТВУЕТ КОМПАНИЯ<br> «ТЕХНОЛОГИИ ТЕСТИРОВАНИЯ»<br> (ООО «ТЕХТЕСТ»)</h1>
             <h2>Мы производим пусконаладочные работы на объектах энергетики по всей России</h2>
             <div class="mainbutton">
-                <input type="button" name="obo_mne" value="О нас">
-			    <input type="button" name="moi_raboty" value="Наши работы">
+                <input type="button" name="obo_mne" value="О нас" onclick="location.href='#resumeid'">
+			    <input type="button" name="moi_raboty" value="Наши работы" onclick="location.href='#geographyworkid'">
         </div>
         </div>
     </section>
-    <section class="resume">
+    <section class="resume section" id="resumeid">
         <div class="containerresume">
             <h2 class="resumeh2">О компании</h2>
             <p class="resumep">Компания «Технологии Тестирования» - это комплексный подход к пуску объектов энергетики в работу, включающий в себя как испытания, так и пуско-наладку оборудования.</p>
         </div>
     </section>
-    <section class="services">
+    <section class="services section" id="servicesid">
         <h2>УСЛУГИ</h2>
         <div class="servicslide">
             <div class="container">
@@ -227,7 +255,7 @@
             </div>
         </div> -->
     </section>
-    <section class="advantages">
+    <section class="advantages section" id="advantagesid">
         <h2>НАШИ ПРЕИМУЩЕСТВА</h2>
         <div class="advantagerow">
             <div class="advantage">
@@ -244,7 +272,7 @@
             </div>
         </div>
     </section>
-    <section class="equipments">
+    <section class="equipments section" id="equipmentsid">
         <h2>НАШЕ ОБОРУДОВАНИЕ</h2>
         <div class="containerequipments">
             <div class="multiple-items">
@@ -395,7 +423,7 @@
             </div>
         </div>
         </section>
-        <section class="qualification">
+        <section class="qualification section" id="qualificationid">
             <h2>НАША КВАЛИФИКАЦИЯ</h2>
             <p>Наши сотрудники прошли обучение тамто и там то...............</p>
             <div class="certificate">
@@ -404,7 +432,7 @@
                 <img src="" alt="Сертификат 3">
             </div>
         </section>
-        <section class="customers">
+        <section class="customers section" id="customersid">
             <h2>ЗАКАЗЧИКИ</h2>
             <div class="customersrow">
                 <div class="customer">
@@ -437,7 +465,7 @@
                 </div>
         </div>
     </section>
-    <section class="geographywork">
+    <section class="geographywork section" id="geographyworkid">
         <h2>ГЕОГРАФИЯ НАШИХ РАБОТ</h2>
         <div class="map">
             <img src="img/russia1.png" alt="Карта нахождения объектов">
@@ -534,7 +562,7 @@
               </div>
         </div>
     </section>
-    <section class="documentation">
+    <section class="documentation section" id="documentationid">
         <h2>ДОКУМЕНТАЦИЯ</h2>
         <!-- <h3>Свидетельство о регистрации электролабаратории</h3>
         <div class="certificate">
@@ -548,7 +576,7 @@
             <li><a href="file/ПУЭ испытания.pdf" target="_blank">ПУЭ Глава 1.8 Нормы приемо-сдаточных испытаний</a></li>
         </ul>
     </section>
-    <section class="contacts">
+    <section class="contacts section" id="contactsid">
         <h2>КОНТАКТЫ</h2>
         <p>Ниже указаны контакты по которым вы можете с нами связаться</p>
         <div class="containercontacts">
@@ -567,9 +595,9 @@
         </div>
         <p>Оставьте ваши контакты и мы с вами свяжемся</p>
         <form action="">
-            <input class="imia" type="text" name="youname1" required placeholder="Имя">
-			<input class="pochta" type="text" name="youemail" required placeholder="E-mail">
-            <textarea class="sms" name="youmessage" required placeholder="Сообщение"></textarea>
+            <input class="name2" type="text" name="youname2" required placeholder="Имя">
+			<input class="pochta2" type="text" name="youemail" required placeholder="E-mail">
+            <textarea class="sms2" name="youmessage" required placeholder="Сообщение"></textarea>
 			<input class="otpravka" type="submit" name="otpravit2" value="Отправить">
         </form>
         <div class="messengericon2">
@@ -584,7 +612,7 @@
             <iframe id="map_545262124" frameborder="0" width="100%" height="100%" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe><script type="text/javascript">(function(e,t){var r=document.getElementById(e);r.contentWindow.document.open(),r.contentWindow.document.write(atob(t)),r.contentWindow.document.close()})("map_545262124", "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUsdCl7dmFyIHI9SlNPTi5wYXJzZShlKSxuPUpTT04ucGFyc2UodCk7ZnVuY3Rpb24gYShlKXtyZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KGF0b2IoZSkuc3BsaXQoIiIpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4iJSIrKCIwMCIrZS5jaGFyQ29kZUF0KDApLnRvU3RyaW5nKDE2KSkuc2xpY2UoLTIpfSkuam9pbigiIikpfURHLnRoZW4oZnVuY3Rpb24oKXt2YXIgZT1ERy5tYXAoIm1hcCIse2NlbnRlcjpbbi5sYXQsbi5sb25dLHpvb206bi56b29tfSk7REcuZ2VvSlNPTihyLHtzdHlsZTpmdW5jdGlvbihlKXt2YXIgdCxyLG4sYSxvO3JldHVybntmaWxsQ29sb3I6bnVsbD09PSh0PWUpfHx2b2lkIDA9PT10P3ZvaWQgMDp0LnByb3BlcnRpZXMuZmlsbENvbG9yLGZpbGxPcGFjaXR5Om51bGw9PT0ocj1lKXx8dm9pZCAwPT09cj92b2lkIDA6ci5wcm9wZXJ0aWVzLmZpbGxPcGFjaXR5LGNvbG9yOm51bGw9PT0obj1lKXx8dm9pZCAwPT09bj92b2lkIDA6bi5wcm9wZXJ0aWVzLnN0cm9rZUNvbG9yLHdlaWdodDpudWxsPT09KGE9ZSl8fHZvaWQgMD09PWE/dm9pZCAwOmEucHJvcGVydGllcy5zdHJva2VXaWR0aCxvcGFjaXR5Om51bGw9PT0obz1lKXx8dm9pZCAwPT09bz92b2lkIDA6by5wcm9wZXJ0aWVzLnN0cm9rZU9wYWNpdHl9fSxwb2ludFRvTGF5ZXI6ZnVuY3Rpb24oZSx0KXtyZXR1cm4icmFkaXVzImluIGUucHJvcGVydGllcz9ERy5jaXJjbGUodCxlLnByb3BlcnRpZXMucmFkaXVzKTpERy5tYXJrZXIodCx7aWNvbjpmdW5jdGlvbihlKXtyZXR1cm4gREcuZGl2SWNvbih7aHRtbDoiPGRpdiBjbGFzcz0nYnVsbGV0LW1hcmtlcicgc3R5bGU9J2JvcmRlci1jb2xvcjogIitlKyI7Jz48L2Rpdj4iLGNsYXNzTmFtZToib3ZlcnJpZGUtZGVmYXVsdCIsaWNvblNpemU6WzIwLDIwXSxpY29uQW5jaG9yOlsxMCwxMF19KX0oZS5wcm9wZXJ0aWVzLmNvbG9yKX0pfSxvbkVhY2hGZWF0dXJlOmZ1bmN0aW9uKGUsdCl7ZS5wcm9wZXJ0aWVzLmRlc2NyaXB0aW9uJiZ0LmJpbmRQb3B1cChhKGUucHJvcGVydGllcy5kZXNjcmlwdGlvbikse2Nsb3NlQnV0dG9uOiEwLGNsb3NlT25Fc2NhcGVLZXk6ITB9KSxlLnByb3BlcnRpZXMudGl0bGUmJnQuYmluZFRvb2x0aXAoYShlLnByb3BlcnRpZXMudGl0bGUpLHtwZXJtYW5lbnQ6ITAsb3BhY2l0eToxLGNsYXNzTmFtZToicGVybWFuZW50LXRvb2x0aXAifSl9fSkuYWRkVG8oZSl9KX0pKCdbeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsiY29sb3IiOiIjZjIxMzAyIiwidGl0bGUiOiIwSjdRbnRDZUlNS3IwS0xRbGRDbDBLTFFsZENoMEtMQ3V3PT0iLCJkZXNjcmlwdGlvbiI6IlBIQSswSnJRbnRDYzBKL1FrTkNkMEpqUXJ5RENxOUNpMEpYUXBkQ2QwSjdRbTlDZTBKUFFtTkNZSU5DaTBKWFFvZENpMEpqUW9OQ2UwSkxRa05DZDBKalFyOEs3UEM5d1BnPT0iLCJ6SW5kZXgiOjEwMDAwMDAwMDB9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6WzQ3LjI5NzkyNCw1Ni4xMjE1NDJdfSwiaWQiOjQzOX1dJywneyJsYXQiOjU2LjEyMTI2Mzc2NzcwMDMwNiwibG9uIjo0Ny4yOTg3MjAxODA5ODgzMiwiem9vbSI6MTh9Jyk8L3NjcmlwdD48c2NyaXB0IGFzeW5jPSIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbS9ndGFnL2pzP2lkPVVBLTE1ODg2NjE2OC0xIj48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+KGZ1bmN0aW9uKGUpe2Z1bmN0aW9uIHQoKXtkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpfXdpbmRvdy5kYXRhTGF5ZXI9d2luZG93LmRhdGFMYXllcnx8W10sdCgianMiLG5ldyBEYXRlKSx0KCJjb25maWciLGUpLHdpbmRvdy5ndGFnPXR9KSgnVUEtMTU4ODY2MTY4LTEnKTwvc2NyaXB0PjwvYm9keT4=")</script>
 	</section>
     <footer>
-        <p>Copyrite©2022 Общество с ограниченной ответственностью "ТЕХТРАНС" ИНН 2130219566 КПП 213001001 ОГРН 1202100005227</p>
+        <p>Copyrite©2022 ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ТЕХНОЛОГИИ ТЕСТИРОВАНИЯ" ИНН 2130176506 КПП 213001001 ОГРН 1162130063336</p>
     </footer>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

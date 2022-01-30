@@ -39,13 +39,71 @@ function FindOnPage(inputId) {//ищет текст на странице, в п
 
 
 //Преобразование меню с навигацией в фиксированную при скролле
+let containernav1 = $('.containernav1');
+let containernav1Height = containernav1.height();
 $(window).scroll(function(){
-	if ($(window).scrollTop() > 120) {
+	if ($(window).scrollTop() > containernav1Height) {
 		$('.containernav2').addClass('containernav2-fixed');
 	}
 	else {
 		$('.containernav2').removeClass('containernav2-fixed');
 	}
+});
+
+//Добавление подстветки пунктов меню при скроле страницы (взял из обучения). На этой странице не работает
+// $(window).scroll(() => {
+// 	let scrollDistance = $(window).scrollTop();
+// 	$(".section").each((i, el) => {
+// 		if ($(el).offset().top - $(".containernav2").outerHeight() <= scrollDistance) {
+// 			$(".containernav2 a").each((i, el) =>{
+// 				if ($(el).hasClass(".active")) {
+// 					$(el).removeClass(".active");
+// 				}
+// 			});
+// 			$('.containernav2 li:eq('+ i +')').find('a').addClass('.active');
+// 		}
+// 	});
+// });
+
+//Добавление подстветки пунктов меню при скроле страницы.
+$(function() {
+
+    let section = $('.section'),
+          nav = $('.menu'),
+          navHeight = nav.outerHeight(); // получаем высоту навигации 
+
+    // поворот экрана 
+    window.addEventListener('orientationchange', function () {
+        navHeight = nav.outerHeight();
+    }, false);
+
+    $(window).on('scroll', function () {
+        const position = $(this).scrollTop();
+
+        section.each(function () {
+            const top = $(this).offset().top - navHeight - 5,
+                  bottom = top + $(this).outerHeight();
+
+            if (position >= top && position <= bottom) {
+                nav.find('a').removeClass('active');
+                section.removeClass('active');
+
+                $(this).addClass('active');
+                nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+            }
+        });
+    });
+
+    nav.find('a').on('click', function () {
+        const id = $(this).attr('href');
+
+        $('html, body').animate({
+            scrollTop: $(id).offset().top - navHeight
+        }, 487);
+
+        return false;
+    });
+
 });
 
 
@@ -116,3 +174,29 @@ $('.multiple-items').slick({
 	prevArrow: "<img src='img/prev.png' class='prev' alt='1'>",
     nextArrow: "<img src='img/next.png' class='next' alt='2'>",
   });
+
+  //Кнопка обратного звонка
+
+const callbackBtn = document.querySelector('.callback');
+
+callbackBtn.addEventListener('mouseover', () => {
+	callbackBtn.classList.add("animate__animated");
+	callbackBtn.classList.add("animate__shakeX");
+	callbackBtn.classList.add("animate__repeat-1");
+});
+
+callbackBtn.addEventListener("click", (event) => {
+	callbackBtn.classList.add("activecallback");
+});
+
+document.addEventListener('click', (event) => {
+	if (!event.target.closest('.callback')) {
+		callbackBtn.classList.remove("activecallback");
+	}
+});
+
+callbackBtn.addEventListener("mouseout", () => {
+	callbackBtn.classList.remove("animate__animated");
+	callbackBtn.classList.remove("animate__shakeX");
+	callbackBtn.classList.remove("animate__repeat-1");
+});

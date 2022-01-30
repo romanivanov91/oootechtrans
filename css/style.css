@@ -94,6 +94,12 @@ nav {
     width: 25px;
     height: 25px;
 }
+.logo {
+	color: #fff;
+	font-size: 25px;
+	line-height: 60px;
+	float: left;
+}
 .messenger {
     text-align: center;
 }
@@ -106,6 +112,27 @@ nav {
 .tel1 {
     font-size: 14px;
 }
+@media (max-width: 768px){
+    .containernav1 {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+    }
+    .containernav1 img {
+        width: 20px;
+        height: 20px;
+    }
+    .logo, .messenger, .phonenav {
+        margin: 20px auto 0px auto;
+        width: 100%;
+    }
+    .logo {
+        font-size: 20px;
+        line-height: normal;
+    }
+}
+
 .containernav2 {
     display: flex;
     justify-content: space-between;
@@ -115,20 +142,15 @@ nav {
     height: 60px;
 	background: #344051;
 	z-index:100;
-    overflow: hidden;
+    overflow: visible;
 }
 .containernav2-fixed{
     position: fixed;
     top: 0px;
 }
-.logo {
-	color: #fff;
-	font-size: 25px;
-	line-height: 60px;
-	float: left;
-}
 .menu {
-    float: left;
+    display: flex;
+    justify-content: center;
     width:100%;
 }
 @keyframes topshift {
@@ -143,11 +165,34 @@ nav {
 }
 .menu li {
     float: left;
+    text-align: center;
     line-height: 60px;
 	color: #fff;
 	margin-left: 20px;
 	font-size: 14px;
     animation: topshift 1s ease forwards;
+}
+.dropmenu {
+    background-color: #344051;
+}
+.dropmenu li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+@media (max-width: 1291px){
+    .menu  {
+        display: none;
+    }
+    .navbutton {
+        position: absolute;
+        right: 10px;
+    }
+}
+@media (min-width: 1292px){
+    .navbutton {
+        display: none;
+    }
 }
 .menu li a {
 	transition: all 0.5s;
@@ -160,16 +205,55 @@ nav {
 .menu li a:visited {
 	color: white;
 }
+.menu li a.active,
 .menu li a:hover {
 	color: #d17700;
 }
 .menu li a:active {
 	transform: scale(1.1);
 }
+
+/*Заказ обратного звонка*/
+.callback {
+    width: 300px;
+    height:45px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #344051;
+    z-index: 100;
+    border: 2px solid #112c52;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.callback.activecallback {
+    height:250px;
+    transition: all 0.5s ease-out;
+}
+.callback p {
+    width:100%;
+    text-align: center;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.callback form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: 10px;
+}
+.name1, .phone1 {
+	float: left;
+	width: 100%px;
+	height: 35px;
+	margin: 0px 15px 15px 0px;
+}
+
 /* Приветствие */
 .main {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     float: left;
     background: url(../img/veter.jpg) center/cover no-repeat;
 }
@@ -489,6 +573,7 @@ nav {
 .qualification {
     width: 100%;
     background-color: white;
+    padding: 50px;
 }
 .qualification h2 {
     font-size: 36px;
@@ -851,13 +936,13 @@ nav {
 	justify-content: space-between;
 	align-items: flex-start;
 }
-.imia {
+.name2 {
 	float: left;
 	width: 250px;
 	height: 35px;
 	margin: 0px 15px 15px 0px;
 }
-.pochta {
+.pochta2 {
 	float: left;
 	width: 250px;
 	height: 35px;
@@ -868,7 +953,7 @@ nav {
 	margin: 0px auto;
 	flex-direction: column;
 }
-.sms {
+.sms2 {
 	float: left;
 	width: 530px;
 	height: 35px;
