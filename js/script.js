@@ -167,14 +167,57 @@ function changeSlide(direction) {
 }
 
 //Slick-слайдер
-$('.multiple-items').slick({
-	infinite: true,
-	slidesToShow: 3,
-	slidesToScroll: 3,
-	prevArrow: "<img src='img/prev.png' class='prev' alt='1'>",
+//Слайдер инструментов
+$('.responsive').slick({
+  arrows: true,
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ],
+  prevArrow: "<img src='img/prev.png' class='prev' alt='1'>",
+  nextArrow: "<img src='img/next.png' class='next' alt='2'>",
+});
+
+// $('.multiple-items').slick({
+// 	infinite: true,
+// 	slidesToShow: 3,
+// 	slidesToScroll: 3,
+// 	prevArrow: "<img src='img/prev.png' class='prev' alt='1'>",
+//     nextArrow: "<img src='img/next.png' class='next' alt='2'>",
+//   });
+  
+//Слайдер услуг в мобильной версии
+  $('.single-slide').slick({
+    prevArrow: "<img src='img/prev.png' class='prev' alt='1'>",
     nextArrow: "<img src='img/next.png' class='next' alt='2'>",
   });
-
+ 
   //Кнопка обратного звонка
 
 const callbackBtn = document.querySelector('.callback');

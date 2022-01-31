@@ -288,6 +288,10 @@ nav {
     font-size: 24px;
     color: white;
     margin-bottom: 20px;
+    text-align: center;
+}
+.mainbutton {
+    display: flex;
 }
 .title_container input {
 	width: 150px;
@@ -309,6 +313,24 @@ nav {
 .title_container input:active {
 	transform: scale(1.2)
 }
+
+@media (max-width: 992px){
+    .title_container h1 {
+        font-size: 40px;
+    }
+    .title_container h2 {
+        font-size: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .mainbutton {
+        flex-direction: column;
+    }
+    .title_container input {
+        margin-bottom: 20px;
+    }
+}
+
 /* Раздел "О нас" */
 .resume {
     width: 100%;
@@ -340,6 +362,7 @@ nav {
     font-size: 36px;
     margin-bottom: 20px;
     opacity: 0;
+    padding-bottom: 20px;
 }
 .resumeh2.animClass {
     animation: resumeh2move 1s ease forwards;
@@ -359,6 +382,11 @@ nav {
 }
 .resumep.animClass {
     animation: resumepmove 1s ease forwards;
+}
+@media (max-width: 992px){
+    .resume {
+        height: 70%;
+    }
 }
 
 /* Раздел "Услуги" */
@@ -490,21 +518,22 @@ nav {
 /* Слайдер Наши услуги - конец */
 
 .containerservices {
-    display: flex;
+    height:100%;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 .servicerow {
-    width: 500px;
-    margin: 15px;
-    padding: 10px;
-    /* background-color: white; */
+    height: 100vh;
+    padding: 5px;
+    background-color: none;
     /* background: url(../img/3239613.jpg) center/cover no-repeat; */
-    background: url(../img/resumefon.jpg) center/cover no-repeat;
+    /* background: url(../img/resumefon.jpg) center/cover no-repeat; */
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: auto;
 }
 /* .servicerow:hover {
     transform: scale(1.1);
@@ -517,6 +546,16 @@ nav {
     overflow: auto;
 }
  */
+
+ .service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ }
+ .service h3 {
+    text-align: center;
+ }
 .service p{
     padding: 20px;
     font-size: 14px;
@@ -530,6 +569,19 @@ nav {
 }
 .service li {
     list-style-type: initial;
+}
+.service img {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+@media (max-width: 992px){
+    .servicslide {
+        display: none;
+    }
+    .containerservices {
+        display:block;
+    }
 }
 /* .servicerow:focus {
     transform: scale(1.1)
@@ -551,13 +603,14 @@ nav {
     padding-bottom: 50px;
 }
 .advantagerow {
+    width: 75vw;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items:center;
 }
 .advantage {
     width: 25vw;
-    height: 30vh;
     text-align: center;
 }
 .advantage img {
@@ -566,7 +619,17 @@ nav {
 .advantage p {
     font-size: 14px;
     font-weight: bold;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
+    text-align: center;
+}
+@media (max-width: 992px){
+    .advantagerow {
+        flex-direction: column;
+    }
+    .advantage {
+        width: 100vw;
+        padding-bottom: 20px;
+    }
 }
 
 /* Раздел Наша квалификация*/
@@ -590,7 +653,6 @@ nav {
 /* Раздел "Наше оборудование" */
 .equipments {
     width:100%;
-    height: 100vh;
     /* background: url(../img/servicesfon4.jpg) center/cover no-repeat; */
     /* background: 
     radial-gradient(ellipse farthest-corner at right bottom, #fedb37 0%, #FDB931 8%, #9f7928 30%, #8a6e2f 40%, transparent 80%),
@@ -599,6 +661,11 @@ nav {
     /* background: url(../img/volna.jpg) center/cover no-repeat; */
     background-color:whitesmoke;
     padding: 50px;
+}
+@media (max-width: 992px){
+    .equipments {
+        padding: 50px 0px;
+    }
 }
 .equipments h2 {
     text-align: center;
@@ -626,7 +693,7 @@ nav {
   }
 .equipmentrow {
     width: 300px;
-    height: 400px;
+    height: 500px;
     margin: 0 0px;
     padding: 10px;
     background-color: white;
@@ -763,7 +830,8 @@ nav {
     width: 100%;
 }
 .work {
-    height: 500px;
+    width:100%;
+    height: 600px;
     background: none;
     padding: 20px;
     display: flex;
@@ -775,18 +843,19 @@ nav {
     font-size: 24px;
     /* color: white; */
     padding: 10px;
+    text-align: center;
 }
 .imgwork {
-    height: 70%;
+    height: 50%;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    display: flex;
 }
 .imgwork img {
     height: 100%;
     text-align: center;
-    display: inline;
 }
 .imgwork img:hover {
     transform: scale(1.5);
@@ -797,6 +866,18 @@ nav {
     font-size: 14px;
     padding: 10px;
 }
+@media (max-width: 1168px){
+    .imgwork {
+        flex-wrap: wrap;
+    }
+    .imgwork img {
+        height: 52%;
+    }
+    .imgwork img:hover {
+        transform: scale(1);
+    }
+}
+
 
 /*Раздел документация*/
 .documentation {
