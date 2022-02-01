@@ -215,20 +215,32 @@ nav {
 
 /*Заказ обратного звонка*/
 .callback {
-    width: 300px;
-    height:45px;
+    width: 50px;
+    height:50px;
     position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #344051;
+    bottom: 50px;
+    right: 50px;
+    background-color: none;
     z-index: 100;
-    border: 2px solid #112c52;
-    border-radius: 10px;
     overflow: hidden;
 }
+.callback img {
+    width: 50px;
+    height:50px;
+    padding: 0px;
+    margin: 0px auto;
+    display: block;
+}
 .callback.activecallback {
-    height:250px;
+    width: 300px;
+    height:300px;
     transition: all 0.5s ease-out;
+    background-color: #344051;
+    border: 2px solid #112c52;
+    border-radius: 10px;
+
+    bottom: 25px;
+    right: 25px;
 }
 .callback p {
     width:100%;
@@ -316,7 +328,7 @@ nav {
 
 @media (max-width: 992px){
     .title_container h1 {
-        font-size: 40px;
+        font-size: 36px;
     }
     .title_container h2 {
         font-size: 20px;
@@ -327,7 +339,7 @@ nav {
         flex-direction: column;
     }
     .title_container input {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 }
 
@@ -871,10 +883,13 @@ nav {
         flex-wrap: wrap;
     }
     .imgwork img {
-        height: 52%;
+        height: 50%;
     }
     .imgwork img:hover {
         transform: scale(1);
+    }
+    .work {
+        height: 700px;
     }
 }
 
@@ -939,6 +954,11 @@ nav {
     text-decoration: none;
     /* color: white; */
 }
+@media (max-width: 768px){
+    .documentation p, .documentation ul {
+        width: 90%;
+    }
+}
 
 /*Раздел контакты*/
 .contacts {
@@ -970,6 +990,14 @@ nav {
 	justify-content: space-evenly;
 	align-items: flex-start;
 }
+@media (max-width: 768px){
+    .containercontacts {
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+}
+
 .containercontacts img {
 	display: block;
 	margin: 0px auto;
@@ -1009,13 +1037,8 @@ nav {
 	width: 530px;
 	margin: 0px auto;
     padding-bottom: 50px;
-}
-.containerflex3 {
-	display: flex;
-	margin: 0px auto;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
 }
 .name2 {
 	float: left;
@@ -1028,11 +1051,6 @@ nav {
 	width: 250px;
 	height: 35px;
 	margin: 0px 0px 15px 15px;
-}
-.containerflex4 {
-	display: flex;
-	margin: 0px auto;
-	flex-direction: column;
 }
 .sms2 {
 	float: left;
@@ -1062,10 +1080,22 @@ nav {
 .otpravka:active {
 	transform: scale(1.2);
 }
+@media (max-width: 768px){
+    .contacts form {
+        width: 100%;
+    }
+    .name2, .pochta2, .sms2 {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto 15px auto;
+    }
+}
 .messengericon2 {
     display: flex;
     justify-content: center;
     align-items:center;
+    flex-wrap: wrap;
     padding: 25px;
     margin: 0px auto;
 }
@@ -1088,13 +1118,17 @@ nav {
 } */
 footer {
 	width: 100%;
-	height: 90px;
+	height: 15vh;
 	background: #354051;
-	text-align: center
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
 }
 footer p {
 	color: #ffffff;
-	padding: 38px 0px 0px 0px;
+    margin: auto;
 }
 
   /* Шрифты */
