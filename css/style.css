@@ -73,6 +73,10 @@ body {
     font-family: Arial, Helvetica, sans-serif; /*Устанавливаем шрифт для всего документа*/
 }
 
+.acap {
+    background: url(../img/veter.jpg) center/cover no-repeat;
+}
+
 /* Навигация */
 nav {
 	width: 100%;
@@ -86,19 +90,33 @@ nav {
     align-items: center;
     height: 120px;
     /* background: url(../img/zelbluefon3.jpg) center/cover no-repeat; */
-    background: #283535;
+    /* background: #283535; */
+    background: none;
     padding: 10px 100px;
     color:white;
+}
+.logo, .messenger, .phonenav {
+    width: 25vw;
+    box-sizing: border-box;
 }
 .containernav1 img {
     width: 25px;
     height: 25px;
 }
-.logo {
-	color: #fff;
+.logo img {
+	/* color: #fff;
 	font-size: 25px;
-	line-height: 60px;
+	line-height: 60px; */
 	float: left;
+    height: 60px;
+    width: auto;
+}
+@media (max-width: 1024px){
+    .logo img {
+        float: left;
+        height: 40px;
+        width: auto;
+    }
 }
 .messenger {
     text-align: center;
@@ -108,6 +126,7 @@ nav {
 }
 .phonenav {
     float: right;
+    text-align: right;
 }
 .tel1 {
     font-size: 14px;
@@ -127,26 +146,37 @@ nav {
         margin: 20px auto 0px auto;
         width: 100%;
     }
-    .logo {
+    .phonenav {
+        float: center;
+        text-align: center;
+    }
+    .logo img {
+        float: center;
+        text-align: center;
+        height: auto;
+        width: 100%;
+    }
+    /* .logo {
         font-size: 20px;
         line-height: normal;
-    }
+    } */
 }
 
 .containernav2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding-left: 50px;
     padding-right: 50px;
     width:100%;
     height: 60px;
-	background: #344051;
+	background: none;
 	z-index:100;
     overflow: visible;
 }
 .containernav2-fixed{
     position: fixed;
     top: 0px;
+    background: #344051;
 }
 .menu {
     display: flex;
@@ -162,6 +192,9 @@ nav {
 		opacity: 1;
 		margin-top: 0px;
 	}
+}
+.menu ul {
+    margin-right: 20px;
 }
 .menu li {
     float: left;
@@ -266,8 +299,9 @@ nav {
 .main {
     width: 100%;
     height: 80vh;
-    float: left;
-    background: url(../img/veter.jpg) center/cover no-repeat;
+    /* float: left; */
+    /* background: url(../img/veter.jpg) center/cover no-repeat; */
+    background-color: none;
 }
 @keyframes titlemove {
 	from {
@@ -327,8 +361,11 @@ nav {
 }
 
 @media (max-width: 992px){
+    .main {
+        height: 100%;
+    }
     .title_container h1 {
-        font-size: 36px;
+        font-size: 30px;
     }
     .title_container h2 {
         font-size: 20px;
@@ -396,8 +433,11 @@ nav {
     animation: resumepmove 1s ease forwards;
 }
 @media (max-width: 992px){
-    .resume {
+    /* .resume {
         height: 70%;
+    } */
+    .containerresume {
+        width: 100%;
     }
 }
 
@@ -423,7 +463,7 @@ nav {
     margin: 0;
     padding: 0;
     height: 100vh;
-    width:100%;
+    width: 100%;
   }
   .container {
     position: relative;
@@ -530,14 +570,14 @@ nav {
 /* Слайдер Наши услуги - конец */
 
 .containerservices {
-    height:100%;
+    /* height:100%; */
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 .servicerow {
-    height: 100vh;
+    height: 100%;
     padding: 5px;
     background-color: none;
     /* background: url(../img/3239613.jpg) center/cover no-repeat; */
@@ -1003,7 +1043,7 @@ nav {
 	margin: 0px auto;
 }
 .address, .e-mail, .telephone {
-	width: 300px;
+	/* width: 100vw; */
 	margin: 25px auto 20px auto;
 }
 .address p {

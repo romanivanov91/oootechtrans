@@ -154,7 +154,7 @@ function changeSlide(direction) {
 			activeSlideIndex = 0;
 		}
 	} else if (direction === 'down') {
-		activeSlideIndex--
+		activeSlideIndex--;
 		if (activeSlideIndex < 0) {
 			activeSlideIndex = slidesCount - 1;
 		}
@@ -243,3 +243,39 @@ callbackBtn.addEventListener("mouseout", () => {
 	callbackBtn.classList.remove("animate__shakeX");
 	callbackBtn.classList.remove("animate__repeat-1");
 });
+
+
+$ ('#form_phone').submit (function(event){       //вызываем функцию по событию нажатия
+	event.preventDefault();               //отменяем стандартный submit, который переносит нас на левую стандартную страницу
+
+	$.ajax({                              //передаем в функцию ajax объект     
+		type: "POST",                     //метод запроса POST
+		url: "php/mail-phone.php",              //указываем адрес обработчика php
+		data: $(this).serialize()         //данные с нашей формы джейсон (надо погуглить)
+	}).done(function(){                   //функция, которая получает ответ false или true
+		/*если вернулось true*/
+		$(this).find("input").val("");    //очищает формы
+		alert ("Ваши данные успешно отправлены!");  //выводит сообщение об успешной отправке
+		$("#form_phone").trigger("reset");       //чистит формы         
+	});
+	return false;                         //если вернулось false
+});
+
+$ ('#form_message').submit (function(event){       //вызываем функцию по событию нажатия
+	event.preventDefault();               //отменяем стандартный submit, который переносит нас на левую стандартную страницу
+
+	$.ajax({                              //передаем в функцию ajax объект     
+		type: "POST",                     //метод запроса POST
+		url: "php/mail-message.php",              //указываем адрес обработчика php
+		data: $(this).serialize()         //данные с нашей формы джейсон (надо погуглить)
+	}).done(function(){                   //функция, которая получает ответ false или true
+		/*если вернулось true*/
+		$(this).find("input").val("");    //очищает формы
+		alert ("Ваши данные успешно отправлены!");  //выводит сообщение об успешной отправке
+		$("#form_message").trigger("reset");       //чистит формы         
+	});
+	return false;                         //если вернулось false
+});
+
+/*Маска для телефона (плагин maskedinput)*/
+$(".phone1").mask("+7(999) 999-9999");

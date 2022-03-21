@@ -12,13 +12,29 @@
     <meta property="og:url" content="https://romanivanov91.github.io/oootechtrans/" />
     <meta property="og:image" content="img/veter.jpg"/>
     <title>ООО "ТехТест" - испытание и пуско-наладка оборудования на объектах энергетики</title>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+        ym(87427844, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/87427844" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -39,11 +55,12 @@
           <div class="preloader__item"></div>
           <div class="preloader__item"></div>
         </div>
-      </div>
+    </div>
+    <div class="acap">
     <header>
         <nav>
             <div class="containernav1">
-                <div class="logo">ООО «Техтест»</div>
+                <div class="logo"><img src="img/logo4.png" alt="логотип"></div>
                 <!--Форма для поиска. Не стал добавлять на одностраничный сайт
                      <div class="formsearch"> 
                     <form id="search-highlight" action="">
@@ -109,15 +126,6 @@
             </div>
         </nav>
     </header>
-    <div class="callback">
-            <img src="img/pngwing.com.png" alt="Звонок">
-            <p>Заказать обратный звонок</p>
-            <form action="">
-                <input class="name1" type="text" name="youname1" required placeholder="Имя">
-                <input class="phone1" type="text" name="youephone1" required placeholder="Номер телефона">
-                <input class="otpravka" type="submit" name="otpravit1" value="Отправить">
-            </form>
-    </div>
     <section class="main section" id="mainid">
         <div class="title_container">
             <h1>ВАС ПРИВЕТСТВУЕТ КОМПАНИЯ<br> «ТЕХНОЛОГИИ ТЕСТИРОВАНИЯ»<br> (ООО «ТЕХТЕСТ»)</h1>
@@ -128,6 +136,16 @@
             </div>
         </div>
     </section>
+</div>
+<div class="callback">
+    <img src="img/pngwing.com.png" alt="Звонок">
+    <p>Заказать обратный звонок</p>
+    <form id="form_phone" action="php/mail-phone.php" method="post">
+        <input class="name1" type="text" name="youname1" required placeholder="Имя">
+        <input class="phone1" type="text" name="youphone1" required placeholder="Номер телефона">
+        <input class="otpravka" type="submit" name="otpravit1" value="Отправить">
+    </form>
+</div>
     <section class="resume section" id="resumeid">
         <div class="containerresume">
             <h2 class="resumeh2">О компании</h2>
@@ -139,43 +157,43 @@
         <div class="servicslide">
             <div class="container">
                 <div class="sidebar">
-                <div>
-                    <h3>Cтроительно-монтажные работы <br>(монтаж вторичных цепей)</h3>
-                </div>
-                <div>
-                    <h3>Приемо-сдаточные испытания оборудования ПС</h3>
-                </div>
-                <div>
-                    <h3>Контрольные испытания</h3>
-                </div>
-                <div>
-                    <h3>Комплексное опробование</h3>
-                </div>
-                <div>
-                    <h3>Производство ТО устройств РЗА, ЩПТ</h3>
-                    <ul>В данную услугу входят:
-                        <li>Проверка при новом включении, запись уставок (пуско-наладка);</li>
-                        <li>Первый профилактический контроль;</li>
-                        <li>Профилактический контроль;</li>
-                        <li>Профилактическое восстановление (ремонт);</li>
-                        <li>Тестовый контроль;</li>
-                        <li>Опробование;</li>
-                        <li>Технический осмотр;</li>
-                        <li>Проверка АВР.</li>
-                    </ul>	
-                </div>
-                <div>
-                    <h3>Производство ТО электрооборудования ПС</h3>
-                    <ul>В данную услугу входят:
-                        <li>Диагностирование электрооборудования;</li>
-                        <li>Проверку функциональности и регулировку механизмов;</li>
-                        <li>Очистку поверхностей от пыли, грязи и возможных подтеков масла;</li>
-                        <li>Протяжку контактных соединений;</li>
-                        <li>Смазывание контактных и прочих трущихся деталей, и соединений;</li>
-                        <li>Продувку оборудования и помещений;</li>
-                        <li>Добавление при утечке трансформаторного масла и смазочных жидкостей.</li>
-                    </ul>
-                </div>
+                    <div>
+                        <h3>Cтроительно-монтажные работы <br>(монтаж вторичных цепей)</h3>
+                    </div>
+                    <div>
+                        <h3>Приемо-сдаточные испытания оборудования ПС</h3>
+                    </div>
+                    <div>
+                        <h3>Контрольные испытания</h3>
+                    </div>
+                    <div>
+                        <h3>Комплексное опробование</h3>
+                    </div>
+                    <div>
+                        <h3>Производство ТО устройств РЗА, ЩПТ</h3>
+                        <ul>В данную услугу входят:
+                            <li>Проверка при новом включении, запись уставок (пуско-наладка);</li>
+                            <li>Первый профилактический контроль;</li>
+                            <li>Профилактический контроль;</li>
+                            <li>Профилактическое восстановление (ремонт);</li>
+                            <li>Тестовый контроль;</li>
+                            <li>Опробование;</li>
+                            <li>Технический осмотр;</li>
+                            <li>Проверка АВР.</li>
+                        </ul>	
+                    </div>
+                    <div>
+                        <h3>Производство ТО электрооборудования ПС</h3>
+                        <ul>В данную услугу входят:
+                            <li>Диагностирование электрооборудования;</li>
+                            <li>Проверку функциональности и регулировку механизмов;</li>
+                            <li>Очистку поверхностей от пыли, грязи и возможных подтеков масла;</li>
+                            <li>Протяжку контактных соединений;</li>
+                            <li>Смазывание контактных и прочих трущихся деталей, и соединений;</li>
+                            <li>Продувку оборудования и помещений;</li>
+                            <li>Добавление при утечке трансформаторного масла и смазочных жидкостей.</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="main-slide">
                     <div>
@@ -609,7 +627,7 @@
             </div>
         </div>
         <p>Оставьте ваши контакты и мы с вами свяжемся</p>
-        <form action="">
+        <form id="form_message" action="php/mail-message.php" method="post">
             <input class="name2" type="text" name="youname2" required placeholder="Имя">
 			<input class="pochta2" type="text" name="youemail" required placeholder="E-mail">
             <textarea class="sms2" name="youmessage" required placeholder="Сообщение"></textarea>
@@ -630,6 +648,7 @@
         <p>Copyrite©2022 ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ТЕХНОЛОГИИ ТЕСТИРОВАНИЯ" ИНН 2130176506 КПП 213001001 ОГРН 1162130063336</p>
     </footer>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js\jquery.maskedinput.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/script.js"></script>
